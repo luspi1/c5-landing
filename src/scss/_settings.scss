@@ -1,0 +1,133 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-width: 340px;
+  overflow-x: hidden;
+  @include opensans-regular;
+  font-size: 20px;
+  line-height: 1.4;
+  background-color: #ffffff;
+  color: $black;
+  position: relative;
+}
+
+main {
+  min-height: 100vh;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+svg {
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+textarea {
+  resize: none;
+}
+
+.number-mask,
+.currency-mask {
+  text-align: left !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+._disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.site-container {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.container {
+  margin: 0 auto;
+  max-width: 1250px;
+  padding: 0 15px;
+}
+
+
+.trim-string {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  z-index: -1;
+
+  &_active {
+    z-index: 998;
+    visibility: visible;
+  }
+}
+
