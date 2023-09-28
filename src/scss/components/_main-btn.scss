@@ -1,43 +1,10 @@
 .main-btn {
-  color: $black;
+  color: #ffffff;
   text-align: center;
-  @include opensans-regular;
-  font-size: 15px;
-  padding: 10px 20px;
-  border-radius: 3px;
-  border: 1px solid $black;
-  background: $white;
-
-  svg {
-    margin-right: 2px;
-    vertical-align: middle;
-  }
-
-  &._blue {
-    border-color: #064AB1;
-    color: #064AB1;
-  }
-
-  &._red {
-    border-color: #920303;
-    color: #920303;
-  }
-
-  &._green {
-    border-color: #00754A;
-    color: #00754A;
-  }
-  &._orange {
-    border-color: #D53E07;
-    color: #D53E07;
-  }
-  &._white {
-    border: none;
-    color: #064AB1;
-    padding: 0;
-  }
-}
-
-a.main-btn {
-  line-height: 1.15;
+  text-transform: uppercase;
+  @include montserrat-semibold;
+  font-size: 16px;
+  padding: 18px 42px;
+  border: none;
+  background: #3090F6;
 }
