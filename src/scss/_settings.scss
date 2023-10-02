@@ -98,6 +98,13 @@ textarea {
 .container {
   margin: 0 auto;
   max-width: 1220px;
+
+
+
+  @media (max-width: 1260px) {
+    width: 90vw;
+
+  }
 }
 
 
@@ -121,5 +128,7 @@ textarea {
   &_active {
     z-index: 998;
     visibility: visible;
+
+
   }
 }

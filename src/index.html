@@ -3,7 +3,10 @@
   @include('partials/head.html', { 'title': 'С-5' })
 
   <body class="page__body home-page">
-    <div class="site-container">
+    <div class="site-container" >
+      <div class="modal-overlay"></div>
+      @include('partials/registration-modal.html')
+
       <header>
         <div class="container">
           @include('partials/main-menu.html')
@@ -15,8 +18,8 @@
         </div>
       </header>
       <main class="main">
-        <div class="container">
-          <section class="swiper swiper-block">
+        <section class="swaper-section">
+          <div class="swiper swiper-block container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 Интеграция с популярными сервисами-агрегаторами_1
@@ -81,158 +84,29 @@
                 </svg>
               </button>
             </div>
-          </section>
+          </div>
+        </section>
 
+        <div class="container">
           <section class="system-functions">
             <ul class="system-functions-list">
               <li class="system-functions-item">
-                <button>
-                  <span>
-                    Организация сайта гостиницы и управление сайтом
-                    <svg
-                      width="22"
-                      height="22"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11.2614 14.1305L10.957 13.8696L13.7397 10.9566L10.957 8.04358L11.2614 7.73926L14.3484 10.9566L11.2614 14.1305Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                      <path
-                        d="M11 21C5.47826 21 1 16.5217 1 11C1 5.47826 5.47826 1 11 1C16.5217 1 21 5.47826 21 11C21 16.5217 16.4783 21 11 21ZM11 1.43478C5.73913 1.43478 1.43478 5.73913 1.43478 11C1.43478 16.2609 5.73913 20.5652 11 20.5652C16.2609 20.5652 20.5652 16.2609 20.5652 11C20.5652 5.73913 16.2609 1.43478 11 1.43478Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                      <path
-                        d="M13.0871 10.7397H7.65234V11.1745H13.0871V10.7397Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                <button>Организация сайта гостиницы и управление сайтом</button>
+              </li>
+              <li class="system-functions-item">
+                <button>Настраиваемая система бронирования</button>
               </li>
               <li class="system-functions-item">
                 <button>
-                  <span>
-                    Настраиваемая система бронирования
-                    <svg
-                      width="22"
-                      height="22"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11.2614 14.1305L10.957 13.8696L13.7397 10.9566L10.957 8.04358L11.2614 7.73926L14.3484 10.9566L11.2614 14.1305Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                      <path
-                        d="M11 21C5.47826 21 1 16.5217 1 11C1 5.47826 5.47826 1 11 1C16.5217 1 21 5.47826 21 11C21 16.5217 16.4783 21 11 21ZM11 1.43478C5.73913 1.43478 1.43478 5.73913 1.43478 11C1.43478 16.2609 5.73913 20.5652 11 20.5652C16.2609 20.5652 20.5652 16.2609 20.5652 11C20.5652 5.73913 16.2609 1.43478 11 1.43478Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                      <path
-                        d="M13.0871 10.7397H7.65234V11.1745H13.0871V10.7397Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                    </svg>
-                  </span>
+                  Интеграция с популяр-ными сервисами-агрега-торами
                 </button>
               </li>
               <li class="system-functions-item">
-                <button>
-                  <span>
-                    Интеграция с популяр-ными сервисами-агрега-торами
-                    <svg
-                      width="22"
-                      height="22"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11.2614 14.1305L10.957 13.8696L13.7397 10.9566L10.957 8.04358L11.2614 7.73926L14.3484 10.9566L11.2614 14.1305Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                      <path
-                        d="M11 21C5.47826 21 1 16.5217 1 11C1 5.47826 5.47826 1 11 1C16.5217 1 21 5.47826 21 11C21 16.5217 16.4783 21 11 21ZM11 1.43478C5.73913 1.43478 1.43478 5.73913 1.43478 11C1.43478 16.2609 5.73913 20.5652 11 20.5652C16.2609 20.5652 20.5652 16.2609 20.5652 11C20.5652 5.73913 16.2609 1.43478 11 1.43478Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                      <path
-                        d="M13.0871 10.7397H7.65234V11.1745H13.0871V10.7397Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                <button>Управление несколькими объектами размещения</button>
               </li>
               <li class="system-functions-item">
                 <button>
-                  <span>
-                    Управление несколькими объектами размещения
-                    <svg
-                      width="22"
-                      height="22"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11.2614 14.1305L10.957 13.8696L13.7397 10.9566L10.957 8.04358L11.2614 7.73926L14.3484 10.9566L11.2614 14.1305Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                      <path
-                        d="M11 21C5.47826 21 1 16.5217 1 11C1 5.47826 5.47826 1 11 1C16.5217 1 21 5.47826 21 11C21 16.5217 16.4783 21 11 21ZM11 1.43478C5.73913 1.43478 1.43478 5.73913 1.43478 11C1.43478 16.2609 5.73913 20.5652 11 20.5652C16.2609 20.5652 20.5652 16.2609 20.5652 11C20.5652 5.73913 16.2609 1.43478 11 1.43478Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                      <path
-                        d="M13.0871 10.7397H7.65234V11.1745H13.0871V10.7397Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                    </svg>
-                  </span>
-                </button>
-              </li>
-              <li class="system-functions-item">
-                <button>
-                  <span>
-                    Несколько вариантов присоединения к&nbsp;системе
-                    <svg
-                      width="22"
-                      height="22"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11.2614 14.1305L10.957 13.8696L13.7397 10.9566L10.957 8.04358L11.2614 7.73926L14.3484 10.9566L11.2614 14.1305Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                      <path
-                        d="M11 21C5.47826 21 1 16.5217 1 11C1 5.47826 5.47826 1 11 1C16.5217 1 21 5.47826 21 11C21 16.5217 16.4783 21 11 21ZM11 1.43478C5.73913 1.43478 1.43478 5.73913 1.43478 11C1.43478 16.2609 5.73913 20.5652 11 20.5652C16.2609 20.5652 20.5652 16.2609 20.5652 11C20.5652 5.73913 16.2609 1.43478 11 1.43478Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                      <path
-                        d="M13.0871 10.7397H7.65234V11.1745H13.0871V10.7397Z"
-                        fill="white"
-                        stroke="white"
-                      />
-                    </svg>
-                  </span>
+                  Несколько вариантов присоединения к&nbsp;системе
                 </button>
               </li>
             </ul>
@@ -279,12 +153,9 @@
                 <span>2</span>Разворачиваем<br />
                 Вашу копию системы
               </li>
-              <li><span>3</span>Помогаем в&nbsp;настройке</li>
-              <li>
-                <span>4</span>Готовим&nbsp;контент<br />
-                и обучаем персонал
-              </li>
-              <li><span>5</span>Все готово и&nbsp;работает</li>
+              <li><span>3</span>Помогаем в настройке</li>
+              <li><span>4</span>Готовим контент и обучаем персонал</li>
+              <li><span>5</span>Все готово и работает</li>
             </ul>
           </div>
         </section>
@@ -313,6 +184,7 @@
                   class="form-item__input phone-mask"
                   type="tel"
                   name="user_phone"
+                  autocomplete="off"
                 />
                 <label class="form-item__label">Номер телефона</label>
               </div>
@@ -323,11 +195,12 @@
                   type="email"
                   name="user_email"
                   required
+                  autocomplete="off"
                 />
                 <label class="form-item__label">Адрес почты*</label>
               </div>
 
-              <select class="form-item" name="user_query">
+              <select class="form-item select" name="user_query">
                 <option value="0">Что Вас интересует?</option>
               </select>
 
