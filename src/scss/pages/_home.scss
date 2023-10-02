@@ -5,9 +5,11 @@
   }
 
   header {
-    min-height: 684px;
+    //min-height: 684px;
     background: url("../img/header-bg.jpg") no-repeat;
     background-size: cover;
+    min-height: 577px;
+
     h1 {
       color: #ffffff;
       @include book-bold;
@@ -16,5 +18,303 @@
       max-width: 610px;
       line-height: 1.2;
     }
+  }
+
+  .swiper {
+    position: relative;
+    padding: 15px 0;
+    margin-bottom: 60px;
+
+    .swiper-slide {
+      @include book-bold;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 42px;
+    }
+
+    .slider-buttons {
+      z-index: 10;
+      position: absolute;
+      top: 15px;
+      right: 0;
+
+      .slider-button-prev {
+        margin-right: 11px;
+      }
+
+      button:hover {
+        svg path {
+          stroke: #3090F6;
+        }
+      }
+    }
+  }
+
+  .system-functions-list {
+    margin-bottom: 72px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 28px;
+    column-gap: 40px;
+
+    .system-functions-item {
+      width: calc((100% - 80px) / 3);
+      min-height: 140px;
+
+      button {
+        display: flex;
+        align-items: flex-start;
+        color: #FFF;
+        @include book-bold;
+        font-size: 24px;
+
+        line-height: normal;
+        text-align: left;
+
+        padding: 27px 40px;
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(133deg, #284A6D 41.54%, #ADB9C7 168.38%);
+
+        &:hover {
+          text-decoration: underline;
+          background: linear-gradient(133deg, #133A62 41.54%, #3090F6 168.38%);
+        }
+
+        svg {
+          vertical-align: middle;
+        }
+      }
+
+    }
+  }
+
+  .advantages {
+    margin-bottom: 87px;
+
+    .advantages-list {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 16px;
+      column-gap: 40px;
+
+      .advantages-item {
+        position: relative;
+        display: flex;
+        text-align: center;
+
+        width: calc((100% - 80px) / 3);
+
+        min-height: 355px;
+        @include book-bold;
+        font-size: 26px;
+        line-height: normal;
+
+        &::before {
+          position: absolute;
+          content: '';
+          height: 200px;
+          width: 200px;
+          left: 35px;
+          background-repeat: no-repeat;
+        }
+
+        .text-wrapper {
+          padding: 135px 37px 29px 35px;
+          margin-top: auto;
+          text-align: left;
+          min-height: 270px;
+          background-color: #fff;
+        }
+      }
+
+      .standards {
+        &::before {
+          background-image: url('../../img/icons/standards.svg');
+        }
+      }
+
+      .synchronization {
+        &::before {
+          background-image: url('../../img/icons/synchronization.svg');
+        }
+      }
+
+      .setup {
+        &::before {
+          background-image: url('../../img/icons/setup.svg');
+        }
+      }
+
+      .hosting {
+        &::before {
+          background-image: url('../../img/icons/hosting.svg');
+        }
+      }
+
+      .support {
+        &::before {
+          background-image: url('../../img/icons/support.svg');
+        }
+      }
+    }
+  }
+
+  .connection {
+    color: #fff;
+    margin-bottom: 70px;
+    background: linear-gradient(114deg, #072E57 34.55%, #ADB9C7 105.4%);
+
+    .container {
+      padding: 60px 0 100px 0;
+    }
+
+    h2 {
+      margin-bottom: 40px;
+      @include book-bold;
+      font-size: 70px;
+      line-height: normal;
+    }
+
+    .connection-list {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        @include book-bold;
+        font-size: 30px;
+        line-height: 40px;
+        max-width: min-content;
+
+        span {
+          display: block;
+          margin-bottom: 10px;
+          @include opensans-light;
+          font-size: 50px;
+          line-height: normal;
+          opacity: 0.6;
+        }
+      }
+    }
+
+  }
+
+  .form-wrapper {
+    margin-bottom: 176px;
+
+    border: 5px solid #FFF;
+    padding: 60px 99px 74px 99px;
+
+    h3 {
+      margin-bottom: 40px;
+      font-family: Montserrat;
+      font-size: 30px;
+
+      font-weight: 600;
+      line-height: 40px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .form-item {
+        position: relative;
+        margin-bottom: 25px;
+        max-width: 808px;
+
+        background-color: #fff;
+        border: 1px solid #ADB9C7;
+
+        @include montserrat-medium;
+        font-size: 22px;
+        line-height: normal;
+
+        &__label {
+          position: absolute;
+          pointer-events: none;
+          left: 14px;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: 0.2s ease all;
+          @include montserrat-medium;
+          font-size: 20px;
+          line-height: 24px;
+          color: #817d8c;
+        }
+
+        &__input {
+          width: 100%;
+          padding: 18px 17px;
+
+          border: none;
+          width: 100%;
+          height: 60px;
+          padding: 0 40px 0 20px;
+          @include montserrat-medium;
+          font-size: 20px;
+          line-height: 24px;
+
+          &:focus {
+            outline: 1px solid #3e29ca;
+            background-color: #ffffff;
+          }
+
+          &_active {
+            padding-top: 20px;
+          }
+        }
+
+        &__input_active+.form-item__label {
+          top: 13px;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 18px;
+        }
+      }
+
+      select {
+        padding: 18px 17px;
+        margin-bottom: 40px;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 0L6.49997 10L0 0H13Z' fill='%23072E57'/%3E%3C/svg%3E%0A");
+
+        background-repeat: no-repeat;
+        background-position: right 20px top 30px;
+      }
+
+      button {
+        margin-right: auto;
+        padding: 24px 28px;
+
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 22px;
+      }
+    }
+  }
+
+  footer {
+    margin-bottom: 67px;
+    display: flex;
+    justify-content: space-between;
+    color: #949FAC;
+    text-align: right;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+
+    p:first-child {
+      margin-bottom: 10px;
+    }
+
+    p.footer-align-left {
+      text-align: left;
+      margin-bottom: 16px;
+    }
+
   }
 }
