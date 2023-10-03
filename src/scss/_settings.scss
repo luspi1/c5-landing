@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  min-width: 340px;
+  // min-width: 340px;
   overflow-x: hidden;
   @include opensans-regular;
   font-size: 20px;
@@ -123,8 +123,6 @@ textarea {
   &_active {
     z-index: 998;
     visibility: visible;
-
-
   }
 }
 
