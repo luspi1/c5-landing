@@ -37,6 +37,9 @@ export const manageModal = () => {
         const targetModal = document.querySelector(
           `#${e.currentTarget.dataset.openModal}`,
         )
+
+        console.log(targetModal)
+
         targetModal.classList.add('_active')
         modalOverlay.classList.add('_active')
       })

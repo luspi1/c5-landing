@@ -7,7 +7,7 @@
   }
 
 
-  input + label {
+  input+label {
     display: inline-flex;
     align-items: center;
     user-select: none;
@@ -16,7 +16,7 @@
     color: $black;
   }
 
-  input + label::before {
+  input+label::before {
     content: '';
     display: inline-block;
     width: 15px;
@@ -32,10 +32,11 @@
     background-size: 11px 8px;
   }
 
-  input:checked + label::before {
+  input:checked+label::before {
     background-image: url("../img/check-mark.svg");
   }
 }
+
 .main-radio {
   input {
     position: absolute;
@@ -45,7 +46,7 @@
   }
 
 
-  input + label {
+  input+label {
     display: inline-flex;
     align-items: center;
     user-select: none;
@@ -54,7 +55,7 @@
     color: $black;
   }
 
-  input + label::before {
+  input+label::before {
     content: '';
     display: inline-block;
     width: 15px;
@@ -70,8 +71,7 @@
     background-size: 8.75px 8.75px;
   }
 
-  input:checked + label::before {
+  input:checked+label::before {
     background-image: url("../img/check-radio.svg");
   }
 }
-
