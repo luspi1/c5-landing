@@ -7,4 +7,10 @@
   padding: 18px 42px;
   border: none;
   background: #3090F6;
+
+
+  @media (max-width: 600px) {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 }
