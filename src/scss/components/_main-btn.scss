@@ -13,4 +13,23 @@
     padding: 10px 20px;
     font-size: 14px;
   }
+
+  &._dark-blue {
+    background: #004D9F;
+    border-radius: 3px;
+    @include opensans-semibold;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 9px 19px;
+  }
+  &._outline-blue {
+    background: transparent;
+    border-radius: 3px;
+    border: 1px solid #004D9F;
+    @include opensans-semibold;
+    color: #004D9F;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 9px 19px;
+  }
 }

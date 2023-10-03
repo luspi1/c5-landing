@@ -1,0 +1,52 @@
+.auth-panel {
+  background: linear-gradient(133deg, #284A6D 41.54%, #3090F6 168.38%);
+  padding: 16px 0;
+  margin-bottom: 30px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @media (max-width: 850px) {
+      flex-direction: column;
+    }
+  }
+
+  h3 {
+    color: #FFF;
+    @include opensans-bold;
+    font-size: 20px;
+  }
+
+
+  &__right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 35px;
+  }
+
+  &__welcome {
+    @include opensans-regular;
+    font-size: 15px;
+    color: #ffffff;
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__escape {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    color: #ffffff;
+    font-size: 15px;
+
+    svg {
+      margin-left: 8px;
+    }
+  }
+}

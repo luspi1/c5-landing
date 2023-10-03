@@ -37,6 +37,7 @@ h3,
 h4,
 h5,
 h6 {
+  margin: 0;
   font-size: inherit;
 }
 
@@ -97,7 +98,8 @@ textarea {
 
 .container {
   margin: 0 auto;
-  max-width: 1220px;
+  max-width: 1250px;
+  padding: 0 15px;
 }
 
 
@@ -124,4 +126,12 @@ textarea {
 
 
   }
+}
+
+.main-title {
+  color: #000;
+  @include book-bold;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }

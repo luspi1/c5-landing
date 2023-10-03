@@ -9,7 +9,13 @@
 @import "./components/main-input";
 @import "./components/main-checkbox";
 @import "./components/modals";
+@import "./components/auth-panel";
+@import "./components/main-section";
+@import "./components/fix-row";
+@import "./components/main-controllers";
+@import "./components/side-navigation";
 
 //Страницы
 
 @import "./pages/home";
+@import "./pages/one-organization";
