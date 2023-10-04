@@ -8,14 +8,26 @@
 @import "./components/main-btn";
 @import "./components/main-input";
 @import "./components/main-checkbox";
+@import "./components/main-textarea";
+@import "./components/main-table";
 @import "./components/modals";
 @import "./components/auth-panel";
 @import "./components/main-section";
 @import "./components/fix-row";
 @import "./components/main-controllers";
 @import "./components/side-navigation";
+@import "./components/upload-photos";
+@import "./components/pagination";
+@import "./components/orders-limit-modal";
+
+
+
 
 //Страницы
 
 @import "./pages/home";
 @import "./pages/one-organization";
+@import "./pages/edit-organization";
+@import "./pages/organizations-list";
+@import "./pages/orders-list";
+@import "./pages/hotelier-profile";

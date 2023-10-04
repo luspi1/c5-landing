@@ -1,0 +1,153 @@
+.edit-organization-page {
+    padding-bottom: 115px;
+
+    h1 {
+        margin-bottom: 3px;
+        @include book-bold;
+        font-size: 30px;
+        line-height: normal;
+    }
+
+    .main-section {
+        padding-top: 12px;
+        padding-bottom: 30px;
+        border: none;
+        background: #fff;
+
+
+        &__item {
+            margin-top: 25px;
+
+            &:first-of-type {
+                border: none;
+                padding-top: 0;
+                margin-top: 0;
+            }
+        }
+    }
+
+    .inputs-row {
+        width: 100%;
+
+        input,
+        select {
+            width: 580px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        &.small-margin {
+            margin-bottom: 5px;
+
+            input {
+                align-self: flex-start;
+            }
+        }
+
+        .centering-block {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        &__desc {
+            display: inline-block;
+            max-width: 350px;
+            height: max-content;
+            font-family: 'Open Sans';
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.3;
+
+            @media (max-width: 768px) {
+                padding-top: 0;
+            }
+        }
+
+        &._textarea {
+            align-items: flex-start;
+            padding-bottom: 0px;
+
+            textarea {
+                width: 580px;
+            }
+
+            label {
+                margin-top: 15px;
+            }
+
+            .inputs-row__desc {
+                align-self: flex-start;
+                padding-top: 10px;
+
+                @media (max-width: 768px) {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+    .input-column-wrapper {
+        width: 100%;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        label {
+            margin-bottom: 0px;
+            font-family: 'Open Sans';
+            font-size: 15px;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        &__row {
+            max-width: 580px;
+        }
+    }
+
+    &__property-type-input {
+        max-width: 95px;
+    }
+
+    &__city-input {
+        width: 85%;
+    }
+
+    &__photos-desc {
+        margin-bottom: 15px;
+
+        h6 {
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-family: 'Open Sans';
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            font-weight: 300;
+            line-height: 1.4;
+            font-family: 'Open Sans';
+            font-size: 15px;
+            font-weight: 300;
+
+        }
+    }
+
+    .upload-photos {
+        .general-dropzone.dz-started {
+            .dz-message {
+                display: none;
+            }
+
+            .upload-photos__info {
+                display: none;
+            }
+        }
+    }
+}
