@@ -1,7 +1,7 @@
-<div class="modal" id="orders-limit-modal">
+<div class="modal" id="change-login-modal">
   <button
     class="modal-close-btn"
-    data-close-modal="orders-limit-modal"
+    data-close-modal="change-login-modal"
     type="button"
   >
     <svg
@@ -17,16 +17,56 @@
       />
     </svg>
   </button>
-  <div>
-    <h4>Действует ограничение</h4>
-    <p>Извините, Ваша учетная запись действует в тестовом режиме.</p>
-    <p>
-      Вы уже создали один тестовый заказ сайта. Для того, чтобы сделать больше
-      одного заказа, а также перевести тестовый заказ сайта в коммерческий
-      статус, Вам нужно подключить коммерческую учетную запись.
-    </p>
-    <a class="main-btn enable-commercial-btn" href="#"
-      >включить коммерческий аккаунт</a
+  <form action="#">
+    <h4>Обращение к администрации</h4>
+    <p class="subtitle">Пожалуйста, поменяйте мой логин (электронную почту).</p>
+    <div class="input-column-wrapper">
+      <label>Старый логин*</label>
+      <input
+        class="main-input"
+        type="email"
+        placeholder="example@example.com"
+        name="old_login"
+        required
+      />
+    </div>
+    <div class="input-column-wrapper">
+      <label>Новый логин*</label>
+      <input
+        class="main-input"
+        type="email"
+        placeholder="example_new@example.com"
+        name="new_login"
+        required
+      />
+    </div>
+    <div class="input-column-wrapper">
+      <label>Новый логин еще раз*</label>
+      <input
+        class="main-input"
+        type="email"
+        placeholder="example_new@example.com"
+        name="new_login_repeat"
+        required
+      />
+    </div>
+    <div class="input-column-wrapper">
+      <label>Пароль*</label>
+      <input
+        class="main-input"
+        type="password"
+        placeholder="*************"
+        name="password"
+        required
+      />
+      @include('./eye-button.html')
+    </div>
+    <button
+      class="main-btn _blue submit-btn"
+      type="submit"
+      data-close-modal="change-login-modal"
     >
-  </div>
+      запросить
+    </button>
+  </form>
 </div>

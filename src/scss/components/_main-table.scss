@@ -47,10 +47,6 @@
       padding-bottom: 8px;
 
       .main-table__cell {
-
-
-
-
         font-family: 'Open Sans';
         font-size: 13px;
 
@@ -100,7 +96,6 @@
         }
       }
     }
-
   }
 
   &__cell {
@@ -114,12 +109,10 @@
     &:not(:last-child) {
       padding-right: 10px;
     }
-
   }
 
-  .download-btn {
+  button.download-btn {
     padding: 0;
-    //margin-left: auto;
     font-size: 13px;
     background-color: transparent;
 
