@@ -13,7 +13,7 @@
     }
 
     &__info {
-        
+
         margin-bottom: 15px;
         position: relative;
         padding: 9px 8px 12px 37px;
@@ -71,24 +71,18 @@
                 font-size: 15px;
                 font-weight: 600;
                 line-height: 24px;
-
-                
             }
         }
 
         .add-order-btn {
             text-transform: none;
             padding: 8px 10px;
-
-            
         }
     }
 
     .row-number {
         width: auto;
     }
-
-
 
     .main-table {
         //overflow: auto;
@@ -104,11 +98,9 @@
             }
         }
 
-
         &__pagination-row {
             padding: 8px 10px;
         }
-
 
         &__row {
             @media (max-width: 950px) {
@@ -116,10 +108,13 @@
             }
         }
 
-
         &__cell {
             &:not(:last-child) {
                 padding-right: 25px;
+            }
+
+            &:not(:nth-child(5)) {
+                word-break: break-all;
             }
 
             &:nth-child(1) {

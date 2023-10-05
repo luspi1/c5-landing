@@ -16,5 +16,29 @@
 
     .submit-btn {
         padding: 10px 20px;
+        background: #3090F6;
+        border: none;
+        border-radius: 0;
+        color: #FFF;
+        font-family: 'Open Sans';
+    }
+
+    .input-column-wrapper {
+        margin-bottom: 25px;
+
+        label {
+            margin-bottom: 3px;
+        }
+    }
+
+    .change-login__error {
+        font-family: 'Open Sans';
+        font-size: 13px;
+        color: red;
+        text-transform: uppercase;
+    }
+
+    .btn-show-pass {
+        top: 24px;
     }
 }

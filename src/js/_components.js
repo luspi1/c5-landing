@@ -1,5 +1,6 @@
 import './components/inputMask'
 import './components/manageModal'
+import './components/manageLogin'
 import './components/managePassword'
 import './components/formHandler'
 import './components/slider'

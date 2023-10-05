@@ -33,7 +33,7 @@
     <div class="input-column-wrapper">
       <label>Новый логин*</label>
       <input
-        class="main-input"
+        class="main-input change-login__new-login"
         type="email"
         placeholder="example_new@example.com"
         name="new_login"
@@ -43,12 +43,13 @@
     <div class="input-column-wrapper">
       <label>Новый логин еще раз*</label>
       <input
-        class="main-input"
+        class="main-input change-login__new-login-repeat"
         type="email"
         placeholder="example_new@example.com"
         name="new_login_repeat"
         required
       />
+      <span class="change-login__error"></span>
     </div>
     <div class="input-column-wrapper">
       <label>Пароль*</label>
