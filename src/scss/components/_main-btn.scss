@@ -8,11 +8,12 @@
   border: none;
   background: #3090F6;
 
-
   @media (max-width: 600px) {
     padding: 10px 20px;
     font-size: 14px;
   }
+
+  
 
   &._dark-blue {
     background: #004D9F;
@@ -22,6 +23,7 @@
     text-transform: uppercase;
     padding: 9px 19px;
   }
+
   &._outline-blue {
     background: transparent;
     border-radius: 3px;

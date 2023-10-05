@@ -355,7 +355,7 @@
     }
 
     @media (max-width: 380px) {
-      padding: 40px 0;
+      padding: 40px 15px;
     }
 
     h3 {
@@ -383,6 +383,12 @@
         font-size: 22px;
         line-height: normal;
 
+        @media (max-width: 400px) {
+          font-size: 18px;
+          max-height: 45px;
+          margin-bottom: 15px;
+        }
+
 
         &__label {
           position: absolute;
@@ -396,6 +402,10 @@
           color: #ADB9C7;
           font-size: 22px;
           line-height: normal;
+
+          @media (max-width: 400px) {
+            font-size: 18px;
+          }
         }
 
         &__input {
@@ -439,6 +449,7 @@
 
         @media (max-width: 400px) {
           padding-left: 5px;
+          margin-bottom: 25px;
         }
       }
 
@@ -450,6 +461,11 @@
         font-style: normal;
         font-weight: 600;
         line-height: 22px;
+
+        @media (max-width: 360px) {
+          padding: 15px 15px;
+          font-size: 16px;
+        }
       }
     }
   }

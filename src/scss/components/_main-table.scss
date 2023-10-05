@@ -43,15 +43,31 @@
     }
 
     &.main-table__title-row {
+      padding-top: 5px;
+      padding-bottom: 8px;
+
       .main-table__cell {
-        @include opensans-light;
+
+
+
+
+        font-family: 'Open Sans';
         font-size: 13px;
+
+        font-weight: 600;
+        line-height: normal;
       }
     }
 
     &.main-table__pagination-row {
       padding-left: 0;
       justify-content: space-between;
+
+      max-height: 40px;
+
+      display: flex;
+      justify-content: space-between;
+
     }
 
     .elements-count {
@@ -72,10 +88,12 @@
       width: 100%;
       display: flex;
       align-items: center;
+
       button[type="submit"] {
         border: 1px solid #D0D5DF;
         padding: 5px;
         transition: all .3s;
+
         &:hover {
           background-color: #D0D5DF;
           color: #ffffff;
@@ -99,4 +117,18 @@
 
   }
 
+  .download-btn {
+    padding: 0;
+    //margin-left: auto;
+    font-size: 13px;
+    background-color: transparent;
+
+    color: #004D9F;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.26px;
+  }
 }
