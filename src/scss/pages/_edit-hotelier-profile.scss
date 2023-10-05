@@ -1,0 +1,42 @@
+.edit-hotelier-profile-page {
+    padding-bottom: 115px;
+
+    .login-info {
+        min-width: 580px;
+        padding-top: 10px;
+
+        &__label {
+            font-family: 'Open Sans';
+            font-size: 15px;
+
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &__current-email {
+            font-family: 'Open Sans';
+            font-size: 15px;
+
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        &__desc {
+            padding-top: 22px;
+        }
+    }
+
+    .change-login-btn {
+        display: inline-block;
+        text-align: left;
+        padding: 0;
+
+        color: #064AB1;
+
+        font-family: 'Open Sans';
+        font-size: 15px;
+
+        font-weight: 600;
+        line-height: normal;
+    }
+}

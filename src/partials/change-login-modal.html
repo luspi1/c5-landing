@@ -1,7 +1,7 @@
-<div class="modal" id="registration-modal">
+<div class="modal" id="change-login-modal">
   <button
     class="modal-close-btn"
-    data-close-modal="registration-modal"
+    data-close-modal="change-login-modal"
     type="button"
   >
     <svg
@@ -18,73 +18,56 @@
     </svg>
   </button>
   <form action="#">
-    <h4>Регистрация отельера</h4>
+    <h4>Обращение к администрации</h4>
+    <p class="subtitle">Пожалуйста, поменяйте мой логин (электронную почту).</p>
     <div class="input-column-wrapper">
-      <label>Название отельера*</label>
-      <input
-        class="main-input"
-        type="text"
-        placeholder="Бренд, название организации или ФИО сотрудника"
-        name="hotelier_name"
-        required
-      />
-    </div>
-    <div class="input-column-wrapper">
-      <label>Город или регион*</label>
-      <input
-        class="main-input"
-        type="text"
-        placeholder="Россия, Тамбов"
-        name="hotelier_city"
-        required
-      />
-    </div>
-    <div class="input-column-wrapper">
-      <label>Логин отельера (e-mail)*</label>
+      <label>Старый логин*</label>
       <input
         class="main-input"
         type="email"
         placeholder="example@example.com"
-        name="hotelier_login"
+        name="old_login"
         required
       />
     </div>
     <div class="input-column-wrapper">
-      <label>Телефон*</label>
+      <label>Новый логин*</label>
       <input
-        class="main-input phone-mask"
-        type="tel"
-        placeholder="+7 (999) 999-99-99"
-        name="hotelier_phone"
+        class="main-input change-login__new-login"
+        type="email"
+        placeholder="example_new@example.com"
+        name="new_login"
         required
       />
     </div>
-    <p class="text">
-      Пароль будет создан Системой автоматически и прислан Вам на электронную
-      почту, указанную Вами в качестве логина.
-    </p>
-    <div class="main-checkbox registration-agree">
+    <div class="input-column-wrapper">
+      <label>Новый логин еще раз*</label>
       <input
-        type="checkbox"
-        id="registration-agree"
-        name="registration_agree"
-        checked
+        class="main-input change-login__new-login-repeat"
+        type="email"
+        placeholder="example_new@example.com"
+        name="new_login_repeat"
+        required
       />
-      <label for="registration-agree"
-        >Подверждаю ознакомление с <a href="#">Правилами Системы</a><br />
-        и <a href="#">Соглашением о Персональных Данных</a></label
-      >
+      <span class="change-login__error"></span>
     </div>
-    <button class="main-btn _blue registration-btn" type="submit">
-      Зарегистрироваться
-    </button>
+    <div class="input-column-wrapper">
+      <label>Пароль*</label>
+      <input
+        class="main-input"
+        type="password"
+        placeholder="*************"
+        name="password"
+        required
+      />
+      @include('./eye-button.html')
+    </div>
     <button
-      class="enter-link"
-      data-close-modal="registration-modal"
-      data-open-modal="enter-modal"
-      type="button"
+      class="main-btn _blue submit-btn"
+      type="submit"
+      data-close-modal="change-login-modal"
     >
-      Войти с учетной записью отельера
+      запросить
     </button>
   </form>
 </div>

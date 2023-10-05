@@ -1,0 +1,44 @@
+#change-login-modal {
+    min-width: 540px;
+
+    h4 {
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        margin-bottom: 10px;
+        font-family: 'Open Sans';
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    .submit-btn {
+        padding: 10px 20px;
+        background: #3090F6;
+        border: none;
+        border-radius: 0;
+        color: #FFF;
+        font-family: 'Open Sans';
+    }
+
+    .input-column-wrapper {
+        margin-bottom: 25px;
+
+        label {
+            margin-bottom: 3px;
+        }
+    }
+
+    .change-login__error {
+        font-family: 'Open Sans';
+        font-size: 13px;
+        color: red;
+        text-transform: uppercase;
+    }
+
+    .btn-show-pass {
+        top: 24px;
+    }
+}

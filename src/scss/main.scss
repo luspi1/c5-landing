@@ -19,15 +19,17 @@
 @import "./components/upload-photos";
 @import "./components/pagination";
 @import "./components/orders-limit-modal";
-
-
+@import "./components/change-login-modal";
+@import "./components/eye-button";
+@import "./components/modals-enter";
+@import "./components/modals-reset-password";
 
 
 //Страницы
-
 @import "./pages/home";
 @import "./pages/one-organization";
 @import "./pages/edit-organization";
 @import "./pages/organizations-list";
 @import "./pages/orders-list";
 @import "./pages/hotelier-profile";
+@import "./pages/edit-hotelier-profile";
