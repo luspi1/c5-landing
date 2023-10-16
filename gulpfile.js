@@ -340,7 +340,7 @@ const htmlMinify = () => {
     .pipe(dest(buildFolder))
 }
 
-const zipFiles = () => {
+const zipFiles = (done) => {
   del.sync([`${buildFolder}/*.zip`])
   return src(`${buildFolder}/**/*.*`, {})
     .pipe(
