@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru" class="page" xmlns="http://www.w3.org/1999/html">
+@include('partials/head.html', { 'title': 'Одна организация' })
+
+<body class="page__body test-page">
+<div class="site-container">
+  <div class="modal-overlay"></div>
+  @include('partials/orders-limit-modal.html')
+  @include('partials/base-limit-modal.html')
+  @include('partials/extended-limit-modal.html')
+  <header>
+    <div class="auth-panel">
+      <div class="container">
+        <h3>Система управления гостиницей</h3>
+        <div class="auth-panel__right">
+          <p class="auth-panel__welcome">
+            Добро пожаловать,
+            <span>Иван Сергеевич</span>
+          </p>
+          <a class="auth-panel__escape" href="#">
+            Выход
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="1.09766"
+                y="16.3867"
+                width="21.6901"
+                height="0.867605"
+                transform="rotate(-45 1.09766 16.3867)"
+                fill="white"
+                stroke="white"
+              />
+              <rect
+                x="16.3359"
+                y="16.9512"
+                width="21.6901"
+                height="0.867605"
+                transform="rotate(-135 16.3359 16.9512)"
+                fill="white"
+                stroke="white"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container">
+      <div class="test-page__btns">
+        <button class="main-btn" data-open-modal="orders-limit-modal">Тестовый режим
+        </button>
+        <button class="main-btn" data-open-modal="base-limit-modal">Базовый тариф
+        </button>
+        <button class="main-btn" data-open-modal="extended-limit-modal">Расширенный тариф
+        </button>
+
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

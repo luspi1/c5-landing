@@ -1,90 +1,61 @@
 #enter-modal {
-    background-color: #fff;
+  padding-bottom: 35px;
 
-    .input-column-wrapper {
-        margin-right: 0;
-        margin-bottom: 17px;
-        position: relative;
+  .input-column-wrapper {
+    margin-right: 0;
+    margin-bottom: 17px;
+    position: relative;
+  }
+
+  .modal-links {
+    margin-bottom: 22px;
+
+    button {
+      font-weight: 600;
+    }
+  }
+
+  .btn-show-pass {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 18px;
+    right: 15px;
+    top: 28px;
+    transform: translateY(calc(35px / 2 - 50%));
+
+    &__eye-open {
+      display: none;
     }
 
-    .modal-links {
-        margin-bottom: 22px;
+    &__eye-close {
+      display: block;
     }
 
-    .btn-show-pass {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        width: 20px;
-        height: 18px;
-        right: 15px;
-        top: 32px;
-        transform: translateY(calc(35px / 2 - 50%));
+    &._open {
+      .btn-show-pass__eye-close {
+        display: none;
+      }
 
-        &__eye-open {
-            display: none;
-        }
-
-        &__eye-close {
-            display: block;
-        }
-
-        &._open {
-            .btn-show-pass__eye-close {
-                display: none;
-            }
-
-            .btn-show-pass__eye-open {
-                display: block;
-            }
-        }
+      .btn-show-pass__eye-open {
+        display: block;
+      }
     }
+  }
 
-    h4 {
-        color: #000;
-        font-family: 'Open Sans';
-        font-size: 25px;
-        font-weight: 600;
-        line-height: normal;
-    }
 
-    label {
-        margin-bottom: 4px;
-        color: #000;
-        font-family: 'Open Sans';
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-    }
-
-    .btn-show-pass {
-        top: 26px;
-    }
 }
 
 .reset-password-form {
-    width: 425px;
-    position: relative;
-    top: 20px;
-    border-radius: 0 0 5px 5px;
+  padding-top: 15px;
+  border-top: 1px solid #D0D5DF;
+  margin-top: 20px;
 
-    p:first-child {
-        padding-top: 5px;
-        margin-bottom: 12px;
-        position: relative;
-        font-size: 15px;
-        font-weight: 300;
-        line-height: normal;
-
-        &::after {
-            position: absolute;
-            content: '';
-            height: 1px;
-            width: 100%;
-            top: -10px;
-            right: 0;
-            background-color: #E3DDDD;
-        }
-    }
+  p {
+    max-width: 415px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    @include opensans-regular;
+  }
 }

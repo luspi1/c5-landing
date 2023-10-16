@@ -1,7 +1,7 @@
-<div class="modal" id="reset-password-modal">
+<div class="modal tariff-modal" id="extended-limit-modal">
   <button
     class="modal-close-btn"
-    data-close-modal="reset-password-modal"
+    data-close-modal="orders-limit-modal"
     type="button"
   >
     <svg
@@ -17,36 +17,15 @@
       />
     </svg>
   </button>
-  <form class="styled-form" action="#">
-    <h4>Восстановить пароль</h4>
-    <div class="input-column-wrapper">
-      <label>Логин учетной записи*</label>
-      <input
-        class="main-input"
-        type="email"
-        placeholder="example@example.com"
-        name="hotelier_login"
-        required
-      />
-    </div>
 
-    <div class="modal-links">
-      <button
-        type="button"
-        data-open-modal="enter-modal"
-        data-close-modal="reset-password-modal"
-      >
-        Войти с паролем
-      </button>
-      <button
-        type="button"
-        data-open-modal="registration-modal"
-        data-close-modal="reset-password-modal"
-      >
-        Пройти регистрацию
-      </button>
-    </div>
+    <h4>Действует ограничение</h4>
+    <p>Извините, Ваш тариф — <span>Расширенный</span>.</p>
+    <p>
+      Вы уже создали три заказа сайтов. Для того, чтобы сделать больше трех
+      заказов, Вам нужно сменить тариф на Премиум.
+    </p>
+    <a class="main-btn enable-commercial-btn" href="#"
+    >поменять тариф</a
+    >
 
-    <button class="main-btn" type="submit">Восстановить пароль</button>
-  </form>
 </div>

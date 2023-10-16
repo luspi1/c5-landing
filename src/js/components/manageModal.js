@@ -40,10 +40,6 @@ export const manageModal = () => {
 
         targetModal.classList.add('_active')
         modalOverlay.classList.add('_active')
-
-        if (btn.classList.contains('main-menu__auth-btn')) {
-          document.querySelector('.main-menu__links').style.display = 'none'
-        }
       })
     })
   }

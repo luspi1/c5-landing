@@ -1,0 +1,32 @@
+.tariff-modal {
+  padding: 35px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h4 {
+    color: #920303;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .enable-commercial-btn {
+    padding: 10px 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+  }
+}

@@ -47,11 +47,8 @@
   label {
     margin-bottom: 5px;
     display: block;
-    //font-weight: 300;
-    //min-height: 25px;
 
-    // margin-bottom: 0px;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     font-weight: 600;
     line-height: normal;
@@ -77,9 +74,7 @@
   @include opensans-regular;
   font-size: 15px;
   width: 100%;
-  border-radius: 3px;
-  border: 1px solid #E3DDDD;
-  border-bottom: 1px solid #868585;
+  border: 1px solid #ADB9C7;
 }
 
 select.main-input {
@@ -99,9 +94,7 @@ select.main-input {
     @include opensans-regular;
     font-size: 15px;
     width: 100%;
-    border-radius: 3px;
-    border: 1px solid #E3DDDD;
-    border-bottom: 1px solid #868585;
+    border: 1px solid #ADB9C7;
 
     &::placeholder {
       color: #91969A;

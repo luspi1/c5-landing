@@ -7,7 +7,7 @@
 
     .subtitle {
         margin-bottom: 10px;
-        font-family: 'Open Sans';
+        font-family: 'Open Sans', sans-serif;
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
@@ -20,7 +20,7 @@
         border: none;
         border-radius: 0;
         color: #FFF;
-        font-family: 'Open Sans';
+        font-family: 'Open Sans', sans-serif;
     }
 
     .input-column-wrapper {
@@ -32,7 +32,7 @@
     }
 
     .change-login__error {
-        font-family: 'Open Sans';
+        font-family: 'Open Sans', sans-serif;
         font-size: 13px;
         color: red;
         text-transform: uppercase;
