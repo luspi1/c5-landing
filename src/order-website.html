@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ru" class="page" xmlns="http://www.w3.org/1999/html">
+  @include('partials/head.html', { 'title': 'Заказать сайт'})
+
+  <body class="page__body order-website-page">
+    <div class="site-container">
+      <div class="modal-overlay"></div>
+      @include('partials/change-login-modal.html')
+      <header>
+        <div class="auth-panel">
+          <div class="container">
+            <h3>Система управления гостиницей</h3>
+            <div class="auth-panel__right">
+              <p class="auth-panel__welcome">
+                Добро пожаловать,
+                <span>Иван Сергеевич</span>
+              </p>
+              <a class="auth-panel__escape" href="#">
+                Выход
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="1.09766"
+                    y="16.3867"
+                    width="21.6901"
+                    height="0.867605"
+                    transform="rotate(-45 1.09766 16.3867)"
+                    fill="white"
+                    stroke="white"
+                  />
+                  <rect
+                    x="16.3359"
+                    y="16.9512"
+                    width="21.6901"
+                    height="0.867605"
+                    transform="rotate(-135 16.3359 16.9512)"
+                    fill="white"
+                    stroke="white"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container">
+          <div class="main-section-wrapper">
+            @include('partials/side-navigation.html')
+            <form class="main-section-wrapper__right">
+              <div class="main-section">
+                <div class="main-section-container">
+                  <h1 class="main-title">Заказать сайт</h1>
+                  <p class="main-section__desc">
+                    На этой странице Вы можете заказать сайт для существующего
+                    объекта размещения.
+                  </p>
+
+                  <p class="order-website-page__info">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.5 10C19.5 15.2467 15.2467 19.5 10 19.5C4.75329 19.5 0.5 15.2467 0.5 10C0.5 4.75329 4.75329 0.5 10 0.5C15.2467 0.5 19.5 4.75329 19.5 10Z"
+                        stroke="white"
+                      />
+                      <path
+                        d="M8.69766 15.2998C8.39766 14.9998 8.19766 14.5998 8.19766 14.0998C8.19766 13.5998 8.39766 13.1998 8.69766 12.8998C8.99766 12.5998 9.49767 12.3998 9.99767 12.3998C10.4977 12.3998 10.9977 12.5998 11.2977 12.8998C11.5977 13.1998 11.7977 13.5998 11.7977 14.0998C11.7977 14.5998 11.5977 14.9998 11.2977 15.2998C10.9977 15.5998 10.4977 15.7998 9.99767 15.7998C9.39767 15.7998 8.99766 15.5998 8.69766 15.2998ZM8.09766 4.2998H11.7977L11.1977 11.4998H8.79767L8.09766 4.2998Z"
+                        fill="white"
+                      />
+                    </svg>
+
+                    Внимание: каждый объект размещения (гостиница, санаторий,
+                    бутик-отель и так далее) требует отдельного интернет-сайта,
+                    при этом система управления для всех ваших объектов —
+                    единая.
+                  </p>
+
+                  <div class="main-section__item">
+                    <div class="inputs-row mb0">
+                      <div class="input-column-wrapper">
+                        <label>Название сайта</label>
+                        <div class="centering-block">
+                          <input
+                            class="main-input"
+                            type="text"
+                            placeholder="Например, Гостиница Славянская"
+                            name="website_name"
+                            required
+                          />
+                          <p class="inputs-row__desc">
+                            Наименование сайта для отображения в адресной строке
+                            и заголовке. Будет также показано во всех внутренних
+                            списках.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="inputs-row">
+                      <div class="input-column-wrapper">
+                        <label>Префикс сайта</label>
+                        <div class="centering-block">
+                          <input
+                            class="main-input"
+                            type="text"
+                            placeholder="от 3 до 20 символов, только латинские буквы, цифры и тире"
+                            name="website_prefix"
+                            required
+                          />
+                          <p class="inputs-row__desc">
+                            Будет использован в адресе сайта до перехода сайта
+                            из тестового в коммерческий режим
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="main-section__item">
+                    <div class="inputs-row mb0">
+                      <div class="input-column-wrapper">
+                        <label>Цвет темы сайта</label>
+                        <div class="centering-block">
+                          <select class="main-input" name="website_theme">
+                            <option value="0">Красный, синий, белый</option>
+                            <option value="1">Пункт 2</option>
+                          </select>
+                          <p class="inputs-row__desc">
+                            Выберите основной набор цветов темы сайта. В
+                            дальнейшем набор можно будет поменять или заказать
+                            индивидуальный дизайн.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="inputs-row">
+                      <div class="input-column-wrapper">
+                        <div class="centering-block">
+                          <div>
+                            <div class="order-website-page__photos-desc">
+                              <h6>Логотип сайта*</h6>
+                              <p>
+                                соотношение сторон 1:1 (квадрат, круг, ромб),
+                                векторный формат SVG
+                              </p>
+                            </div>
+
+                            <div class="upload-photos general-dropzone-wrapper">
+                              <div
+                                id="websiteLogo"
+                                data-show-preview="true"
+                                class="dropzone general-dropzone"
+                                data-general-info='{"url": "./data/test.txt", "removeUrl": "./data/test.txt", "width": "175", "height": "115", "acceptedFiles": ".png, .jpeg, .jpg", "type": "orgLogo", "filesCount": "1", "additional": "доп.контент"}'
+                              >
+                                <div class="dz-message">
+                                  <svg
+                                    class="dropzone-hide"
+                                    width="30"
+                                    height="21"
+                                    viewBox="0 0 30 21"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M27.9213 0H2.07723C0.930008 0 0 0.930008 0 2.07723V18.8413C0 19.9885 0.930008 20.9186 2.07723 20.9186H27.9213C29.0685 20.9186 29.9985 19.9885 29.9985 18.8413V2.07723C29.9985 0.930008 29.0685 0 27.9213 0Z"
+                                      fill="#F4F7FA"
+                                    />
+                                    <path
+                                      d="M9.93867 8.59755C11.3804 8.59755 12.5492 7.42877 12.5492 5.987C12.5492 4.54524 11.3804 3.37646 9.93867 3.37646C8.4969 3.37646 7.32812 4.54524 7.32812 5.987C7.32812 7.42877 8.4969 8.59755 9.93867 8.59755Z"
+                                      fill="#064AB1"
+                                    />
+                                    <path
+                                      d="M8.78741 8.32995C9.59336 8.32995 10.2467 7.28097 10.2467 5.98699C10.2467 4.69302 9.59336 3.64404 8.78741 3.64404C7.98147 3.64404 7.32812 4.69302 7.32812 5.98699C7.32812 7.28097 7.98147 8.32995 8.78741 8.32995Z"
+                                      fill="#91D9F9"
+                                    />
+                                    <path
+                                      d="M18.5482 20.9187H1.96335C1.44269 20.9186 0.943398 20.7116 0.575234 20.3435C0.207071 19.9753 0.000164949 19.476 0 18.9554V15.374L4.77427 12.0174C5.03395 11.835 5.34439 11.739 5.66166 11.7428C5.97893 11.7466 6.28698 11.85 6.54222 12.0385L18.5482 20.9187Z"
+                                      fill="#91D9F9"
+                                    />
+                                    <path
+                                      d="M21.8706 9.09274L29.9991 14.0045V18.8908C29.9989 19.4286 29.7852 19.9443 29.4049 20.3245C29.0245 20.7047 28.5088 20.9183 27.971 20.9183H3.73438L18.5451 9.2981C19.0131 8.93059 19.5819 8.71413 20.1759 8.67745C20.7698 8.64078 21.3609 8.78561 21.8706 9.09274Z"
+                                      fill="#064AB1"
+                                    />
+                                  </svg>
+                                  <p class="dropzone-hide">
+                                    Перетащите изображение на это поле
+                                  </p>
+                                </div>
+                                <div class="upload-photos__info">
+                                  <p class="upload-photos__info-title">
+                                    Файл
+                                    <span class="dropzone-hide">еще не</span>
+                                    загружен
+                                  </p>
+                                  <p class="dropzone-hide">
+                                    Перетащите его на поле слева или нажмите на
+                                    ссылку
+                                  </p>
+                                  <button
+                                    class="general-dropzone__add-btn main-btn"
+                                    id="promo-add"
+                                    type="button"
+                                  >
+                                    Загрузить
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="inputs-row__desc gray-bg">
+                            <p>
+                              Логотип будет размещен в заранее установленной
+                              части сайта, в его заголовке, автоматически.
+                            </p>
+                            <br />
+                            <p>
+                              Логотип должен обязательно быть в формате SVG,
+                              привычные форматы JPG и PNG не подойдут.
+                            </p>
+                            <br />
+                            <p>
+                              Фона быть не должно. Цвет логотипа подбирайте
+                              исходя из выбранной цветовой схемы.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="main-section__item">
+                  <div class="inputs-row main-section-container mb0">
+                    <div class="input-column-wrapper">
+                      <label>Языки сайта</label>
+                      <div class="centering-block">
+                        <div class="custom-mult-select">
+                          <select
+                            class="main-input custom-mult-select__input"
+                            name="website-languages"
+                            multiple
+                          >
+                            <option value="0">Русский</option>
+                            <option value="1">English</option>
+                            <option value="2">Кыргыз</option>
+                          </select>
+                        </div>
+
+                        <p class="inputs-row__desc">
+                          Выберите языки сайта. Для этого начните вводить их
+                          названия на русском, английском или самом языке. В
+                          тестовой версии отображается только первый выбранный
+                          язык.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="choose-tariff-block">
+                    <div class="disabled-block">
+                      <div class="inputs-row">
+                        <div class="input-column-wrapper">
+                          <label>Адрес сайта</label>
+                          <div class="centering-block">
+                            <input
+                              class="main-input"
+                              type="url"
+                              placeholder="домен сайта"
+                              name="website_address"
+                            />
+                            <p class="inputs-row__desc">
+                              По этому адресу сайт будет работать после того,
+                              как ему будет присвоен коммерческий статус
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="inputs-row small-margin">
+                        <div class="input-column-wrapper">
+                          <label>Серверы доменных имен (DNS)</label>
+                          <div class="centering-block">
+                            <input
+                              class="main-input"
+                              type="text"
+                              placeholder="например, ns5.reg.ru"
+                              name="website_dns"
+                            />
+                            <p class="inputs-row__desc">
+                              ВНИМАНИЕ: критически важные данные! Убедитесь в
+                              достаточной квалификации или обратитесь к
+                              специалисту!
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="inputs-row">
+                        <div class="input-column-wrapper">
+                          <label>Тариф обслуживания сайта</label>
+                          <div class="centering-block">
+                            <select class="main-input" name="website_tariff">
+                              <option value="0">Простой тариф</option>
+                              <option value="1">Пункт 2</option>
+                            </select>
+                            <p class="inputs-row__desc">
+                              Выбор тарифа обслуживания сайта в зависимости от
+                              Ваших потребностей и планов.
+                              <a class="link" href="#"
+                                >Список тарифов размещен здесь.</a
+                              >
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="choose-tariff-modal">
+                      <svg
+                        width="24"
+                        height="31"
+                        viewBox="0 0 24 31"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.911 22.9117C10.911 22.73 10.9021 22.5483 10.911 22.3666C10.9289 21.8669 10.8842 21.458 10.4903 21.031C9.76529 20.2587 9.94432 19.0231 10.7589 18.3326C11.5555 17.6512 12.7639 17.7511 13.4442 18.5507C14.1334 19.3502 14.0797 20.5586 13.301 21.2763C13.1309 21.4399 13.0593 21.5852 13.0593 21.8215C13.0772 22.5665 13.0682 23.3206 13.0682 24.0656C13.0682 24.7288 12.6117 25.2195 12.012 25.2376C11.4033 25.2467 10.9289 24.747 10.92 24.0656C10.911 23.684 10.911 23.2933 10.911 22.9117Z"
+                          fill="#3090F6"
+                        />
+                        <path
+                          d="M23.944 14.4898C23.944 14.1991 23.944 13.8993 23.8903 13.6085C23.5412 11.6279 22.0822 10.2287 20.1577 9.98338V8.73865C20.1577 4.19587 16.5146 0.498047 12.0391 0.498047H11.9049C7.42935 0.498047 3.78628 4.19587 3.78628 8.73865V9.97429C3.68782 9.98338 3.59831 10.0015 3.5088 10.0197C1.41426 10.4286 0.017902 12.1821 0.00895102 14.3899C0 18.224 0 22.0672 0 25.9013C0 26.1739 0.00895102 26.4464 0.0537061 26.719C0.447551 28.9086 2.18405 30.3623 4.386 30.3623C9.40752 30.3623 14.429 30.3623 19.4595 30.3623C22.1001 30.3623 23.944 28.5088 23.944 25.8286C23.9529 22.049 23.9529 18.2694 23.944 14.4898ZM6.02404 8.73865C6.02404 5.44968 8.66459 2.76944 11.9049 2.76944H12.0481C15.2883 2.76944 17.9289 5.44968 17.9289 8.73865V9.51093H6.02404V8.73865ZM21.7957 25.8649C21.7957 27.2823 20.8917 28.1818 19.5043 28.1908C16.989 28.1908 14.4648 28.1908 11.9496 28.1908C9.45228 28.1908 6.95494 28.1908 4.46656 28.1908C3.0344 28.1908 2.14825 27.2914 2.14825 25.8286C2.14825 22.049 2.14825 18.2603 2.14825 14.4807C2.14825 13.027 3.04335 12.1185 4.47551 12.1185C9.47913 12.1185 14.4828 12.1185 19.4774 12.1185C20.8917 12.1185 21.7957 13.018 21.7957 14.4444C21.8047 18.2512 21.8047 22.0581 21.7957 25.8649Z"
+                          fill="#3090F6"
+                        />
+                      </svg>
+                      <p>
+                        Этот блок станет доступным после того, как Вы смените
+                        тариф учетной записи на любой из платных
+                      </p>
+                      <a class="main-btn" href="#">Перейти к выбору тарифа</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-controllers">
+                <div class="main-controllers__btns-left">
+                  <button class="main-btn _dark-blue" type="submit">
+                    Сохранить и закрыть
+                  </button>
+                  <a href="#" class="main-btn _outline-blue"
+                    >Применить и продолжить</a
+                  >
+                </div>
+                <div class="main-controllers__btns-right">
+                  <button class="main-btn _outline-blue">
+                    Отменить изменения
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+    @include('partials/info-modal.html')
+  </body>
+</html>
