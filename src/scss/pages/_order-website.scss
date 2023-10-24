@@ -1,0 +1,189 @@
+.order-website-page {
+    padding-bottom: 190px;
+
+    .main-section {
+        width: 1010px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .mb0 {
+            margin-bottom: 0;
+        }
+    }
+
+    .main-section-container {
+        padding: 0 15px;
+    }
+
+    &__info {
+        margin-bottom: 15px;
+        position: relative;
+        padding: 9px 8px 12px 37px;
+        border-radius: 5px;
+        background: #1154B9;
+        color: #FFF;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+
+        svg {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    }
+
+    &__photos-desc {
+        margin-bottom: 15px;
+
+        h6 {
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            font-weight: 300;
+            line-height: 1.4;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 300;
+        }
+    }
+
+    .gray-bg {
+        border-radius: 5px;
+        background-color: #F3F5F6;
+        padding: 10px;
+        margin-left: auto;
+        font-size: 13px;
+        margin-top: 20px;
+    }
+
+    .centering-block {
+        align-items: flex-start;
+    }
+
+    .link {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        color: #004D9F;
+    }
+
+    .main-input {
+        border-radius: 3px;
+        min-height: 40px;
+    }
+
+    .select {
+        min-height: 40px;
+    }
+
+    .custom-mult-select {
+        min-width: 580px;
+        background: none;
+
+        .choices__inner {
+            background-color: transparent;
+            min-height: auto;
+            padding: 3px;
+        }
+
+        .choices__item--selectable {
+            padding-right: 0;
+        }
+
+        .choices__list--multiple .choices__item,
+        .choices__button {
+            border: none;
+            background: none;
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            color: #064AB1;
+        }
+
+        .choices__button {
+            margin: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='10.8271' height='0.433083' transform='matrix(0.705929 -0.708282 0.705929 0.708282 1.05078 8.69336)' fill='%23064AB1' stroke='%23064AB1'/%3E%3Crect width='10.8271' height='0.433083' transform='matrix(-0.705929 -0.708282 0.705929 -0.708282 8.64453 8.97559)' fill='%23064AB1' stroke='%23064AB1'/%3E%3C/svg%3E%0A");
+        }
+    }
+
+    .choose-tariff-block {
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .disabled-block {
+        border-radius: 5px;
+        opacity: 1;
+        background: transparent;
+        padding: 10px 15px;
+    }
+
+    .choose-tariff-modal {
+        display: none;
+    }
+
+    ._tariff-blocked {
+        .disabled-block {
+            opacity: 0.7;
+            background: #F3F5F6;
+            pointer-events: none;
+        }
+
+        .choose-tariff-modal {
+            display: block;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            opacity: 1;
+            padding: 30px 40px 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 400px;
+            border-radius: 5px;
+            background: #FFF;
+            box-shadow: 0px 0px 30px 0px rgba(13, 35, 57, 0.15);
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            p {
+                margin: 16px 0 10px 0;
+            }
+
+            a {
+                display: inline-block;
+                padding: 8px 14px;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 22px;
+            }
+        }
+    }
+
+    .main-controllers {
+        button {
+            height: 40px;
+        }
+    }
+}
