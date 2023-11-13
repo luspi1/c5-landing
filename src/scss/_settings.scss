@@ -11,12 +11,12 @@ html {
 }
 
 body {
-  // min-width: 340px;
+  min-width: 340px;
   overflow-x: hidden;
   @include opensans-regular;
   font-size: 20px;
   line-height: 1.4;
-  background-color: #F3F5F6;
+  background-color: #f3f5f6;
 
   color: $black;
   position: relative;
@@ -55,7 +55,6 @@ a {
   color: inherit;
 }
 
-
 button {
   border: none;
   cursor: pointer;
@@ -68,7 +67,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -95,20 +94,17 @@ textarea {
   overflow: hidden;
 }
 
-
 .container {
   margin: 0 auto;
   max-width: 1250px;
   padding: 0 15px;
 }
 
-
 .trim-string {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 
 .modal-overlay {
   position: fixed;

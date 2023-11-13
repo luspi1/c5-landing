@@ -2,7 +2,6 @@
 @import "fonts";
 @import "settings";
 
-
 //Компоненты
 @import "./components/main-menu";
 @import "./components/main-btn";
@@ -25,7 +24,8 @@
 @import "./components/modals-reset-password";
 @import "./components/registration-modal";
 @import "./components/custom-select";
-
+@import "./components/info-modal";
+@import "./components/big-img-modal";
 
 //Страницы
 @import "./pages/home";

@@ -1,6 +1,6 @@
-.modal {
+.modal:not(.info-modal) {
   padding: 25px 30px;
-  background: #F3F5F6;
+  background: #f3f5f6;
   box-shadow: 0 0 30px 0 rgba(19, 58, 98, 0.25);
   position: fixed;
   overflow-y: auto;
@@ -9,7 +9,7 @@
   top: 50%;
   width: 485px;
   transform: translate(-50%, -50%);
-  transition: all .2s;
+  transition: all 0.2s;
   opacity: 0;
   visibility: hidden;
 
@@ -45,18 +45,16 @@
     }
   }
 
-
   .main-btn {
     padding: 11px 16px;
     font-size: 15px;
     @include opensans-semibold;
   }
 
-
   .text {
     margin-top: -5px;
     margin-bottom: 15px;
-    color: #2D3231;
+    color: #2d3231;
     font-size: 13px;
     font-weight: 300;
     line-height: normal;
@@ -70,9 +68,9 @@
     line-height: 18px;
 
     a {
-      color: #004D9F;
+      color: #004d9f;
       line-height: 18px;
-      font-family: 'Open Sans', sans-serif;
+      font-family: "Open Sans", sans-serif;
       font-size: 15px;
 
       font-weight: 600;
@@ -90,7 +88,7 @@
   .submit-btn {
     margin-bottom: 15px;
 
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 15px;
 
     font-weight: 600;
@@ -99,9 +97,9 @@
   }
 
   .enter-link {
-    color: #004D9F;
+    color: #004d9f;
 
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 15px;
 
     font-weight: 600;
@@ -114,7 +112,6 @@
   }
 }
 
-
 .modal-overlay {
   position: fixed;
   left: 0;
@@ -122,7 +119,7 @@
   top: 0;
   bottom: 0;
   opacity: 0.2;
-  background: #1E4166;
+  background: #1e4166;
   visibility: hidden;
   z-index: -1;
 
@@ -135,8 +132,8 @@
 .modal-links {
   display: flex;
   justify-content: space-between;
-  color: #064AB1;
-  font-family: 'Open Sans', sans-serif;
+  color: #064ab1;
+  font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -157,13 +154,12 @@
 
 .submit-btn {
   border-radius: 3px;
-  border: 1px solid #064AB1;
-  color: #064AB1;
+  border: 1px solid #064ab1;
+  color: #064ab1;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
 }
-
