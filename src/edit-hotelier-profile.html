@@ -121,13 +121,14 @@
 
                   <div class="upload-photos general-dropzone-wrapper">
                     <div
-                      id="avatar" 
+                      id="avatar"
                       data-show-preview="true"
                       class="dropzone general-dropzone"
                       data-general-info='{"url": "./data/test.txt", "removeUrl": "./data/test.txt", "width": "175", "height": "115", "acceptedFiles": ".png, .jpeg, .jpg", "type": "avatar", "filesCount": "1", "additional": "доп.контент"}'
                     >
-                      <div class="dz-message">
-                        <svg class="dropzone-hide"
+                      <div class="dz-message _hidden-on-load">
+                        <svg
+                          class="dropzone-hide"
                           width="30"
                           height="21"
                           viewBox="0 0 30 21"
@@ -155,11 +156,14 @@
                             fill="#064AB1"
                           />
                         </svg>
-                        <p class="dropzone-hide">Перетащите изображение на это поле</p>
+                        <p class="dropzone-hide">
+                          Перетащите изображение на это поле
+                        </p>
                       </div>
-                      <div class="upload-photos__info">
+                      <div class="upload-photos__info _hidden-on-load">
                         <p class="upload-photos__info-title">
-                          Файл <span class="dropzone-hide">еще не</span> загружен
+                          Файл
+                          <span class="dropzone-hide">еще не</span> загружен
                         </p>
                         <p class="dropzone-hide">
                           Перетащите его на поле слева или нажмите на ссылку
