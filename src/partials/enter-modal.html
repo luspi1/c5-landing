@@ -1,9 +1,5 @@
 <div class="modal" id="enter-modal">
-  <button
-    class="modal-close-btn"
-    data-close-modal="enter-modal"
-    type="button"
-  >
+  <button class="modal-close-btn" data-close-modal="enter-modal" type="button">
     <svg
       width="26"
       height="25"
@@ -21,12 +17,13 @@
     <h4>Вход отельера</h4>
 
     <div class="input-column-wrapper">
-      <label>Логин учетной записи*</label>
+      <label>Логин учетной записи (номер телефона) *</label>
       <input
-        class="main-input"
-        type="email"
-        placeholder="example@example.com"
+        class="main-input phone-mask"
+        type="tel"
+        placeholder="+7 (999) 999-99-99"
         name="hotelier_login"
+        required
       />
     </div>
 
@@ -37,6 +34,7 @@
         type="password"
         placeholder="*************"
         name="hotelier_password"
+        required
       />
       @include('./eye-button.html')
     </div>
@@ -70,6 +68,7 @@
       <label>Проверочный код*</label>
       <input
         class="main-input"
+        id="smsCode"
         type="password"
         placeholder="******"
         name="enter_code"
@@ -79,6 +78,6 @@
     <div class="modal-links">
       <button type="button">Не приходит код</button>
     </div>
-    <button class="main-btn" type="submit">Подтвердить вход</button>
+    <button class="main-btn confirm-enter" type="submit">Подтвердить вход</button>
   </form>
 </div>

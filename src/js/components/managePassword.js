@@ -1,8 +1,18 @@
 import { SMS_SECONDS_START_VALUE, TIME_INTERVAL_MILLISECONDS } from '../_vars'
+import {
+  sendData,
+  serializeForm,
+  formToObj,
+  showInfoModal,
+} from '../_functions'
+
 const showPasswordButtons = document.querySelectorAll('.btn-show-pass')
 
 const enterForm = document.querySelector('#enter-modal')
 const resetPasswordForm = document.querySelector('.reset-password-form')
+
+const enterButton = document.querySelector('.submit-enter')
+const confirmEnterButton = document.querySelector('.confirm-enter')
 
 if (showPasswordButtons) {
   showPasswordButtons.forEach((item) => {
@@ -36,6 +46,7 @@ const timer = () => {
 const handleSmsSubmit = (e) => {
   e.preventDefault()
   e.currentTarget.querySelector('.submit-enter').classList.add('_disabled')
+  enterButton.classList.add('_disabled')
   resetPasswordForm.classList.remove('hidden')
   const timerId = e.currentTarget.dataset.timer
   if (timerId) clearInterval(timerId)
@@ -45,10 +56,55 @@ const handleSmsSubmit = (e) => {
 
 export const getSmsCode = () => {
   if (enterForm) {
-    enterForm.querySelector('.submit-enter').classList.remove('_disabled')
+    enterButton.classList.remove('_disabled')
     enterForm.removeEventListener('submit', handleSmsSubmit)
     enterForm.addEventListener('submit', handleSmsSubmit)
   }
 }
 
-getSmsCode()
+enterButton.addEventListener('click', async (e) => {
+  e.preventDefault()
+  const enterUserData = formToObj(
+    serializeForm(enterButton.closest('.enter-form')),
+  )
+  const jsonData = JSON.stringify(enterUserData)
+
+  try {
+    const response = await sendData(jsonData, './data/test.txt')
+    const finishedResponse = await response.json()
+
+    const { status, paid_user, redirect_link } = finishedResponse
+
+    if (status === 'ok') {
+      if (!paid_user) {
+        window.location.href = redirect_link
+      } else {
+        getSmsCode()
+      }
+    }
+  } catch (err) {
+    showInfoModal('Во время выполнения запроса произошла ошибка')
+    console.log(err)
+  }
+})
+
+confirmEnterButton.addEventListener('click', async (e) => {
+  e.preventDefault()
+  const smsCode = resetPasswordForm.querySelector('#smsCode').value
+
+  try {
+    const response = await sendData(smsCode, './data/test.txt')
+    const finishedResponse = await response.json()
+
+    const { status, redirect_link } = finishedResponse
+
+    if (status === 'ok') {
+      window.location.href = redirect_link
+    } else {
+      showInfoModal('Неверный SMS код')
+    }
+  } catch (err) {
+    showInfoModal('Во время выполнения запроса произошла ошибка')
+    console.log(err)
+  }
+})
