@@ -97,7 +97,7 @@ if (genDropzones) {
               dropzoneEl.querySelectorAll('.dz-preview').length < filesCount
             ) {
               addBtn?.classList.remove('btn_disabled')
-              hiddenOnLoadElements.forEach((el) =>
+              hiddenOnLoadElements?.forEach((el) =>
                 el.classList.remove('hidden'),
               )
             }
@@ -139,7 +139,7 @@ if (genDropzones) {
 
         if (dropzoneEl.querySelectorAll('.dz-preview').length >= filesCount) {
           addBtn?.classList.add('btn_disabled')
-          hiddenOnLoadElements.forEach((el) => el.classList.add('hidden'))
+          hiddenOnLoadElements?.forEach((el) => el.classList.add('hidden'))
         }
 
         if (cutTitles) {
@@ -158,7 +158,7 @@ if (genDropzones) {
     if (existingFiles.length > 0) {
       if (existingFiles.length >= filesCount) {
         addBtn?.classList.add('btn_disabled')
-        hiddenOnLoadElements.forEach((el) => el.classList.add('hidden'))
+        hiddenOnLoadElements?.forEach((el) => el.classList.add('hidden'))
       }
 
       updateAmountFiles()
@@ -191,7 +191,7 @@ if (genDropzones) {
               dropzoneEl.querySelectorAll('.dz-preview').length < filesCount
             ) {
               addBtn?.classList.remove('btn_disabled')
-              hiddenOnLoadElements.forEach((el) =>
+              hiddenOnLoadElements?.forEach((el) =>
                 el.classList.remove('hidden'),
               )
             }
