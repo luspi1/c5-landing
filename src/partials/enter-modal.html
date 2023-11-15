@@ -13,7 +13,7 @@
       />
     </svg>
   </button>
-  <form class="enter-form styled-form" action="#">
+  <form class="enter-form styled-form" action="./data/test.txt">
     <h4>Вход отельера</h4>
 
     <div class="input-column-wrapper">
@@ -59,11 +59,8 @@
     <button class="main-btn submit-enter" type="submit">Войти</button>
   </form>
 
-  <form class="reset-password-form styled-form hidden" action="#">
-    <p>
-      Код отправлен в виде SMS. Повторить отправку через
-      <span id="smsTimer">0:30</span>
-    </p>
+  <form class="reset-password-form styled-form hidden" action="./data/test.txt">
+    <p>Код отправлен в виде SMS.</p>
     <div class="input-column-wrapper">
       <label>Проверочный код*</label>
       <input
@@ -76,8 +73,10 @@
       />
     </div>
     <div class="modal-links">
-      <button type="button">Не приходит код</button>
+      <a href="index.html">Не приходит код</a>
     </div>
-    <button class="main-btn confirm-enter" type="submit">Подтвердить вход</button>
+    <button class="main-btn confirm-enter" type="submit">
+      Подтвердить вход
+    </button>
   </form>
 </div>

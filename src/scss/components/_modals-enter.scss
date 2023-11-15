@@ -10,7 +10,7 @@
   .modal-links {
     margin-bottom: 22px;
 
-    button {
+    a {
       font-weight: 600;
     }
   }
@@ -43,13 +43,11 @@
       }
     }
   }
-
-
 }
 
 .reset-password-form {
   padding-top: 15px;
-  border-top: 1px solid #D0D5DF;
+  border-top: 1px solid #d0d5df;
   margin-top: 20px;
 
   p {

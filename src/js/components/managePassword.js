@@ -1,18 +1,13 @@
-import { SMS_SECONDS_START_VALUE, TIME_INTERVAL_MILLISECONDS } from '../_vars'
 import {
+  formToObj,
   sendData,
   serializeForm,
-  formToObj,
   showInfoModal,
 } from '../_functions'
 
 const showPasswordButtons = document.querySelectorAll('.btn-show-pass')
 
-const enterForm = document.querySelector('#enter-modal')
-const resetPasswordForm = document.querySelector('.reset-password-form')
-
-const enterButton = document.querySelector('.submit-enter')
-const confirmEnterButton = document.querySelector('.confirm-enter')
+const enterModal = document.querySelector('#enter-modal')
 
 if (showPasswordButtons) {
   showPasswordButtons.forEach((item) => {
@@ -28,83 +23,95 @@ if (showPasswordButtons) {
   })
 }
 
-const timer = () => {
-  const smsTimer = enterForm.querySelector('#smsTimer')
-  smsTimer.innerHTML = `0:${SMS_SECONDS_START_VALUE}`
+export const getSmsCode = (modal) => {
+  const smsForm = modal.querySelector('.reset-password-form')
+  const enterButton = modal.querySelector('.submit-enter')
+  if (smsForm) {
+    smsForm.classList.remove('hidden')
+    enterButton.classList.add('_disabled')
+    const smsFormAction = smsForm.action
+    smsForm.addEventListener('submit', async (e) => {
+      e.preventDefault()
+      const enterUserData = formToObj(serializeForm(e.currentTarget))
+      const jsonData = JSON.stringify(enterUserData)
+      try {
+        const response = await sendData(jsonData, smsFormAction)
+        const finishedResponse = await response.json()
 
-  let smsSeconds = SMS_SECONDS_START_VALUE
+        const { status, redirect_link } = finishedResponse
 
-  const smsIntervalId = setInterval(() => {
-    smsSeconds--
-    if (smsSeconds === 0) clearInterval(smsIntervalId)
-    smsTimer.innerHTML = `0:${smsSeconds}`
-  }, TIME_INTERVAL_MILLISECONDS)
-
-  return smsIntervalId
-}
-
-const handleSmsSubmit = (e) => {
-  e.preventDefault()
-  e.currentTarget.querySelector('.submit-enter').classList.add('_disabled')
-  enterButton.classList.add('_disabled')
-  resetPasswordForm.classList.remove('hidden')
-  const timerId = e.currentTarget.dataset.timer
-  if (timerId) clearInterval(timerId)
-  const id = timer()
-  e.currentTarget.setAttribute('data-timer', id)
-}
-
-export const getSmsCode = () => {
-  if (enterForm) {
-    enterButton.classList.remove('_disabled')
-    enterForm.removeEventListener('submit', handleSmsSubmit)
-    enterForm.addEventListener('submit', handleSmsSubmit)
-  }
-}
-
-enterButton.addEventListener('click', async (e) => {
-  e.preventDefault()
-  const enterUserData = formToObj(
-    serializeForm(enterButton.closest('.enter-form')),
-  )
-  const jsonData = JSON.stringify(enterUserData)
-
-  try {
-    const response = await sendData(jsonData, './data/test.txt')
-    const finishedResponse = await response.json()
-
-    const { status, paid_user, redirect_link } = finishedResponse
-
-    if (status === 'ok') {
-      if (!paid_user) {
-        window.location.href = redirect_link
-      } else {
-        getSmsCode()
+        if (status === 'ok') {
+          window.location.href = redirect_link
+        } else {
+          showInfoModal('Ошибка авторизации!')
+        }
+      } catch (err) {
+        showInfoModal('Неверный sms-код')
+        console.log(err)
       }
-    }
-  } catch (err) {
-    showInfoModal('Во время выполнения запроса произошла ошибка')
-    console.log(err)
+    })
   }
-})
+}
 
-confirmEnterButton.addEventListener('click', async (e) => {
-  e.preventDefault()
-  const smsCode = resetPasswordForm.querySelector('#smsCode').value
+//Логика отправки данных авторизации серверу
 
-  try {
-    const response = await sendData(smsCode, './data/test.txt')
-    const finishedResponse = await response.json()
+const enterForm = enterModal?.querySelector('.enter-form')
+const enterAction = enterForm?.action
 
-    const { status, redirect_link } = finishedResponse
+if (enterForm) {
+  enterForm.addEventListener('submit', async (e) => {
+    e.preventDefault()
+    const enterUserData = formToObj(serializeForm(e.currentTarget))
+    const jsonData = JSON.stringify(enterUserData)
 
-    if (status === 'ok') {
-      window.location.href = redirect_link
-    } else {
-      showInfoModal('Неверный SMS код')
+    try {
+      const response = await sendData(jsonData, enterAction)
+      const finishedResponse = await response.json()
+
+      const { status, paid_user, redirect_link } = finishedResponse
+
+      if (status === 'ok') {
+        if (!paid_user) {
+          window.location.href = redirect_link
+        } else {
+          getSmsCode(enterModal)
+        }
+      } else {
+        showInfoModal('Ошибка авторизации!')
+      }
+    } catch (err) {
+      showInfoModal('Во время выполнения запроса произошла ошибка')
+      console.log(err)
     }
-  } catch (err) {
-    showInfoModal('Во время выполнения запроса произошла ошибка')
-    console.log(err)
-  }
-})
+  })
+}
+
+// Логика восстановления пароля
+
+const resetModal = document.querySelector('#reset-password-modal')
+
+if (resetModal) {
+  const restoreForm = resetModal.querySelector('.restore-form')
+  const restoreAction = restoreForm.action
+  restoreForm.addEventListener('submit', async (e) => {
+    e.preventDefault()
+    const restoreData = formToObj(serializeForm(e.currentTarget))
+    const jsonData = JSON.stringify(restoreData)
+
+    try {
+      const response = await sendData(jsonData, restoreAction)
+      const finishedResponse = await response.json()
+
+      const { status } = finishedResponse
+
+      if (status === 'ok') {
+        getSmsCode(resetModal)
+      } else {
+        showInfoModal('Ошибка восстановления пароля!')
+      }
+    } catch (err) {
+      showInfoModal('Во время выполнения запроса произошла ошибка')
+      console.log(err)
+    }
+  })
+}
