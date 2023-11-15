@@ -2,7 +2,6 @@
   width: 200px;
 
   &__item {
-
     cursor: pointer;
     @include opensans-semibold;
     font-size: 15px;
@@ -15,7 +14,7 @@
     }
 
     &._border-bottom {
-      border-bottom: 1px solid #D0D5DF;
+      border-bottom: 1px solid #d0d5df;
       padding-bottom: 10px;
       margin-bottom: 10px;
     }
@@ -30,14 +29,14 @@
     }
 
     &:hover {
-      color: #004D9F;
+      color: #004d9f;
 
       .side-navigation__item-title {
-        background: #FFF;
+        background: #fff;
       }
 
       svg path {
-        fill: #004D9F;
+        fill: #004d9f;
       }
     }
   }
@@ -53,12 +52,10 @@
       &:not(:last-child) {
         margin-bottom: 0px;
       }
-
     }
   }
 
   &__item-min {
-
     position: relative;
 
     &::after {
@@ -67,7 +64,13 @@
       display: block;
       right: 15px;
       top: 50%;
-      transform: translateY(-50%)
+      transform: translateY(-50%);
+    }
+
+    &._border-bottom {
+      &::after {
+        top: 40%;
+      }
     }
 
     &._active {
@@ -81,9 +84,8 @@
         height: max-content;
 
         li {
-          color: #004D9F;
+          color: #004d9f;
           padding: 6px 0;
-
         }
       }
     }
