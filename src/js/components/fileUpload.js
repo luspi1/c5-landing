@@ -18,18 +18,11 @@ export const initFileUploading = () => {
     fileUploads.forEach((fileUploadEl) => {
       const uploadInput = fileUploadEl.querySelector('.file-upload__add')
       const uploadName = fileUploadEl.querySelector('.file-upload__name')
-
       const uploadDate = fileUploadEl.querySelector('.file-upload__date')
-      uploadDate.textContent = getCurrentDate()
-
       const uploadTime = fileUploadEl.querySelector('.file-upload__time')
-      uploadTime.textContent = getCurrentTime()
-
       const deleteButton = fileUploadEl.querySelector(
         '.file-upload__delete-btn',
       )
-
-      deleteButton.textContent = 'удалить файл'
 
       uploadInput.addEventListener('input', (evt) => {
         let targetInput = evt.currentTarget
@@ -41,6 +34,18 @@ export const initFileUploading = () => {
           if (uploadName) {
             uploadName.textContent = fileItem.name ?? ''
             uploadName.href = reader.result
+          }
+
+          if (uploadDate) {
+            uploadDate.textContent = getCurrentDate()
+          }
+
+          if (uploadTime) {
+            uploadTime.textContent = getCurrentTime()
+          }
+
+          if (deleteButton) {
+            deleteButton.textContent = 'удалить файл'
           }
           // if (uploadSize) {
           //   uploadSize.textContent =
