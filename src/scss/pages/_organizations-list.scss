@@ -1,5 +1,4 @@
 .organizations-list-page {
-
     .main-section {
         border: none;
         background-color: #fff;
@@ -11,7 +10,6 @@
         font-size: 30px;
         line-height: normal;
     }
-
 
     .main-btn {
         padding: 0;
@@ -43,16 +41,11 @@
 
         a {
             min-width: 188px;
-
-
-
         }
 
         button {
             min-width: 90px;
             margin-right: 34px;
-
-
         }
 
         .main-input {
@@ -87,18 +80,15 @@
             }
         }
 
-
         &__pagination-row {
             padding: 8px 10px;
         }
-
 
         &__row {
             @media (max-width: 950px) {
                 min-width: 1150px;
             }
         }
-
 
         &__cell {
             &:not(:last-child) {
@@ -127,5 +117,4 @@
 
         }
     }
-
 }

@@ -1,0 +1,119 @@
+.documents-page {
+    .main-title {
+        margin-bottom: 20px;
+    }
+
+    .add-document {
+        min-width: 195px;
+        font-size: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-transform: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__search {
+        margin-bottom: 15px;
+        display: flex;
+        gap: 34px;
+
+        form {
+            display: flex;
+            flex: 1;
+            gap: 10px;
+            justify-content: space-between;
+
+            .documents-type-select {
+                min-width: 220px;
+            }
+
+            input {
+                min-width: 400px;
+            }
+
+            button.main-btn {
+                text-transform: none;
+            }
+        }
+    }
+
+    &__main-table {
+        margin-bottom: 20px;
+
+        .main-table__row {
+            background-color: #fff;
+            padding: 6px 14px 8px 14px;
+
+            &:hover {
+                cursor: auto;
+                background-color: transparent;
+            }
+        }
+
+        .main-table__title-row {
+            padding: 5px 14px 5px 14px;
+            background: #F7F7F8;
+        }
+
+        .order-cell {
+            width: 4%;
+        }
+
+        .type-cell {
+            width: 13%;
+        }
+
+        .title-cell {
+            width: 51%;
+
+            button {
+                color: #004D9F;
+                font-size: 15px;
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+
+        .date-cell {
+            width: 15%;
+        }
+
+        .payment-cell {
+            width: 16%;
+        }
+
+        .payment-link-list {
+            margin-top: 3px;
+            display: flex;
+            gap: 5px;
+        }
+
+        a.payment-link {
+            padding: 5px 5px 4px 5px;
+            border-radius: 3px;
+            border: 1px solid #D0D5DF;
+            display: flex;
+            align-items: center;
+            color: #000;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            text-transform: lowercase;
+
+            svg {
+                margin-right: 3px;
+            }
+
+            &:hover {
+                color: #004D9F;
+                border: 1px solid #004D9F;
+
+                svg path {
+                    fill: #004D9F;
+                }
+            }
+        }
+    }
+}

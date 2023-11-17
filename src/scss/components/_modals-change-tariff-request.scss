@@ -1,0 +1,43 @@
+#change-tariff-request-modal {
+    width: 510px;
+
+    ._bold {
+        font-weight: 700;
+    }
+
+    .request-details {
+        padding-right: 5px;
+        margin-bottom: 22px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .tariff-info {
+        padding-top: 30px;
+        margin-bottom: 35px;
+        border-top: 1px solid #D0D5DF;
+
+        &__item {
+            display: flex;
+            gap: 78px;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            margin-bottom: 10px;
+        }
+
+        &__item-param {
+            width: 105px;
+        }
+
+        &__item-value {
+            font-weight: 400;
+        }
+    }
+
+    .change-tariff-btn {
+        padding: 12px 25px;
+    }
+}

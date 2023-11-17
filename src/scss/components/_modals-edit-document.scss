@@ -1,0 +1,83 @@
+#edit-document-modal {
+    width: 510px;
+
+    select {
+        padding: 10px;
+    }
+
+    .main-input {
+        min-width: 425px;
+    }
+
+    .input-column-wrapper__row {
+        display: flex;
+    }
+
+    .documents-block {
+        padding-top: 5px;
+        margin-bottom: 20px;
+
+        &__title {
+            margin-bottom: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .documents-list li {
+            padding-right: 25px;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                max-width: 200px;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            .documents-list__item-data {
+                display: flex;
+                align-items: center;
+                color: #909498;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: normal;
+                margin-right: 20px;
+                margin-left: 42px;
+
+                svg {
+                    margin-right: 5px;
+                }
+            }
+
+            .delete-document-button {
+                max-width: 54px;
+                color: #920303;
+                font-size: 13px;
+                font-weight: 600;
+                line-height: normal;
+                text-align: left;
+            }
+        }
+    }
+
+    .download-buttons {
+        margin-bottom: 25px;
+
+        button {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            color: #004D9F;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: uppercase;
+
+            svg {
+                margin-right: 5px;
+            }
+        }
+    }
+}
