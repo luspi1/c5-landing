@@ -1,0 +1,81 @@
+#change-tariff-modal {
+    width: 510px;
+
+    ._bold {
+        font-weight: 700;
+    }
+
+    h4 {
+        margin-bottom: 10px;
+    }
+
+    .current-tariff {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    .tariff-info {
+        padding-bottom: 18px;
+
+        &__item {
+            margin-bottom: 11px;
+            display: flex;
+            gap: 35px;
+            font-size: 15px;
+            line-height: normal;
+
+            .tariff-info__item-param {
+                max-width: 182px;
+                flex: 1.1;
+                font-weight: 300;
+            }
+
+            .tariff-info__item-value {
+                flex: 1.5;
+                max-width: 200px;
+            }
+        }
+    }
+
+    .input-column-wrapper {
+        padding-top: 32px;
+        margin-bottom: 15px;
+        border-top: 1px solid #D0D5DF;
+
+        select {
+            width: 280px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .description-tariff {
+        margin-bottom: 7px;
+
+        &__title {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 15px;
+        }
+    }
+
+    .text {
+        padding-right: 5px;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: normal;
+
+        a {
+            color: #004D9F;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+
+    .change-tariff-btn {
+        padding: 12px 25px;
+    }
+}

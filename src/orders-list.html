@@ -6,6 +6,8 @@
     <div class="site-container">
       <div class="modal-overlay"></div>
       @include('partials/orders-limit-modal.html')
+      @include('partials/change-tariff-modal.html')
+      @include('partials/change-tariff-request-modal.html')
       <header>
         <div class="auth-panel">
           <div class="container">
@@ -194,7 +196,7 @@
                         </svg>
                       </a>
                     </div>
-                    <button class="download-btn main-btn">
+                    <a class="download-btn" href="#">
                       <svg
                         width="12"
                         height="12"
@@ -213,7 +215,7 @@
                       </svg>
 
                       скачать список в csv
-                    </button>
+                    </a>
                   </li>
                 </ul>
               </div>

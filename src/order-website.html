@@ -6,6 +6,8 @@
     <div class="site-container">
       <div class="modal-overlay"></div>
       @include('partials/change-login-modal.html')
+      @include('partials/change-tariff-modal.html')
+      @include('partials/change-tariff-request-modal.html')
       <header>
         <div class="auth-panel">
           <div class="container">
@@ -416,7 +418,12 @@
                         Этот блок станет доступным после того, как Вы смените
                         тариф учетной записи на любой из платных
                       </p>
-                      <a class="main-btn" href="#">Перейти к выбору тарифа</a>
+                      <button
+                        class="main-btn"
+                        data-open-modal="change-tariff-modal"
+                      >
+                        Перейти к выбору тарифа
+                      </button>
                     </div>
                   </div>
                 </div>

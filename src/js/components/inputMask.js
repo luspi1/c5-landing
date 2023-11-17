@@ -1,10 +1,12 @@
 import Inputmask from 'inputmask'
+import { initAllDates } from './customDate'
 
 export const initAllMasks = () => {
   const initDateInputMasks = () => {
     const dateInputMasks = document.querySelectorAll('.date-mask')
 
     if (dateInputMasks) {
+      initAllDates()
       dateInputMasks.forEach((el) => {
         Inputmask({
           alias: 'datetime',

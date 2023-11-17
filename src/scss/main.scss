@@ -22,10 +22,15 @@
 @import "./components/eye-button";
 @import "./components/modals-enter";
 @import "./components/modals-reset-password";
+@import "./components/modals-add-document";
+@import "./components/modals-edit-document";
+@import "./components/modals-change-tariff";
+@import "./components/modals-change-tariff-request";
 @import "./components/registration-modal";
 @import "./components/custom-select";
 @import "./components/info-modal";
 @import "./components/big-img-modal";
+@import "./components/file-upload";
 
 //Страницы
 @import "./pages/home";
@@ -38,3 +43,4 @@
 @import "./pages/test";
 @import "./pages/order-website";
 @import "./pages/order";
+@import "./pages/documents";

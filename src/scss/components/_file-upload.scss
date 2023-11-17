@@ -1,0 +1,85 @@
+.file-upload {
+    &__info {
+        position: relative;
+        display: none;
+        padding-right: 25px;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 30px;
+    }
+
+    &__item-data {
+        position: absolute;
+        right: 25%;
+        top: 0;
+        display: flex;
+
+        div {
+            margin-left: 5px;
+        }
+    }
+
+    &__delete-btn {
+        position: absolute;
+        right: 15px;
+        top: 0px;
+        width: 54px;
+        height: 13px;
+
+        color: #920303;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: normal;
+        text-align: left;
+    }
+
+    &._loaded {
+        .file-upload__add-label {
+            display: none;
+        }
+
+        .file-upload__info {
+            display: block;
+        }
+    }
+
+    .main-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    &__add {
+        opacity: 0;
+        //visibility: hidden;
+        position: absolute;
+
+        &-label {
+            z-index: 1000;
+        }
+    }
+
+    &__name {
+        font-weight: 600;
+        color: #000000;
+    }
+
+    &__delete {
+        background: none;
+        outline: none;
+        border: none;
+        cursor: pointer;
+
+        svg {
+            pointer-events: none;
+
+            path {
+                transition: all .3s;
+            }
+        }
+    }
+}
