@@ -1,4 +1,5 @@
-#add-document-modal {
+#add-document-modal,
+#edit-document-modal {
     width: 510px;
 
     select {
@@ -63,10 +64,12 @@
     }
 
     .download-buttons {
-        margin-bottom: 25px;
+
+        .input-column-wrapper {
+            margin-bottom: 0;
+        }
 
         .file-upload__add-label {
-            margin-bottom: 15px;
             display: flex;
             align-items: center;
             color: #004D9F;
@@ -74,6 +77,9 @@
             font-weight: 600;
             line-height: normal;
             text-transform: uppercase;
+
+            padding: 5px 0;
+            cursor: pointer;
 
             svg {
                 margin-right: 5px;

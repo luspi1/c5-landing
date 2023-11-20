@@ -7,23 +7,28 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 
     &__item-data {
         position: absolute;
-        right: 25%;
+
+        right: 100px;
         top: 0;
         display: flex;
 
         div {
-            margin-left: 5px;
+            margin-left: 6px;
+        }
+
+        svg {
+            margin-top: 5px;
         }
     }
 
     &__delete-btn {
         position: absolute;
-        right: 15px;
+        right: 22px;
         top: 0px;
         width: 54px;
         height: 13px;
@@ -54,7 +59,8 @@
     }
 
     &__add {
-        opacity: 0;
+        width: 0;
+        //opacity: 0;
         //visibility: hidden;
         position: absolute;
 
@@ -81,5 +87,10 @@
                 transition: all .3s;
             }
         }
+    }
+
+    &__date,
+    &__time {
+        color: #909498;
     }
 }
