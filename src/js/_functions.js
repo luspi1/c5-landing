@@ -46,3 +46,17 @@ export const showBigImgModal = (path) => {
     bigImgModal.classList.remove('big-img-modal_active')
   })
 }
+
+export const checkRepeatPasswords = (checkForm) => {
+  const repeatInputs = checkForm.querySelectorAll('.pass-input')
+  const passAlert = checkForm.querySelector('.alert-message')
+
+  const isPassMatch = repeatInputs[0]?.value === repeatInputs[1]?.value
+  if (!isPassMatch) {
+    passAlert.classList.remove('hidden')
+    return false
+  } else {
+    passAlert.classList.add('hidden')
+    return true
+  }
+}

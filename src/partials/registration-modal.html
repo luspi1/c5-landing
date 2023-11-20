@@ -17,7 +17,7 @@
       />
     </svg>
   </button>
-  <form action="#">
+  <form class="reg-form" action="./data/test.txt">
     <h4>Регистрация отельера</h4>
     <div class="input-column-wrapper">
       <label>Название отельера*</label>
@@ -49,9 +49,34 @@
         required
       />
     </div>
+    <div class="input-column-wrapper">
+      <label>Пароль учетной записи*</label>
+      <input
+        class="main-input pass-input"
+        type="password"
+        placeholder="*************"
+        name="hotelier_password"
+        required
+      />
+      @include('./eye-button.html')
+    </div>
+    <div class="input-column-wrapper">
+      <label>Повторите пароль*</label>
+      <input
+        class="main-input pass-input"
+        type="password"
+        placeholder="*************"
+        name="repeat_password"
+        required
+      />
+      @include('./eye-button.html')
+    </div>
+
+    <p class="alert-message hidden">Пароли не совпадают!</p>
+
     <p class="text">
-      Пароль будет создан Системой автоматически и прислан Вам на номер
-      телефона, указанный Вами в качестве логина, в виде SMS.
+      После нажатия кнопки «Зарегистрироваться» Система пришлет Вам СМС со
+      ссылкой. Перейдите по ссылке для завершения регистрации.
     </p>
     <div class="main-checkbox registration-agree">
       <input
@@ -59,6 +84,7 @@
         id="registration-agree"
         name="registration_agree"
         checked
+        required
       />
       <label for="registration-agree"
         >Подверждаю ознакомление с <a href="#">Правилами Системы</a><br />

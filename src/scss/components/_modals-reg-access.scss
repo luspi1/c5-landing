@@ -1,0 +1,16 @@
+#reg-access-modal,
+#reset-access-modal {
+  padding: 35px 30px;
+  h3 {
+    color: #12cc69;
+    text-align: center;
+    @include book-bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  p {
+    text-align: center;
+    font-size: 15px;
+  }
+}

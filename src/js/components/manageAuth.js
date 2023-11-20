@@ -1,13 +1,13 @@
 import {
+  checkRepeatPasswords,
   formToObj,
   sendData,
   serializeForm,
   showInfoModal,
 } from '../_functions'
+import { accessRegModal, accessResetModal } from '../_vars'
 
 const showPasswordButtons = document.querySelectorAll('.btn-show-pass')
-
-const enterModal = document.querySelector('#enter-modal')
 
 if (showPasswordButtons) {
   showPasswordButtons.forEach((item) => {
@@ -53,7 +53,43 @@ export const getSmsCode = (modal) => {
   }
 }
 
+// Логика регистрации
+const regModal = document.querySelector('#registration-modal')
+if (regModal) {
+  const regForm = regModal.querySelector('.reg-form')
+  const regFormAction = regForm?.action
+  regForm.addEventListener('submit', async (e) => {
+    e.preventDefault()
+
+    const isRepeatValid = checkRepeatPasswords(e.currentTarget)
+    if (!isRepeatValid) return
+
+    const regUserData = formToObj(serializeForm(e.currentTarget))
+    const jsonData = JSON.stringify(regUserData)
+
+    try {
+      const response = await sendData(jsonData, regFormAction)
+      const finishedResponse = await response.json()
+
+      const { status } = finishedResponse
+
+      if (status === 'ok') {
+        regModal.classList.remove('_active')
+        accessRegModal.classList.add('_active')
+      } else {
+        showInfoModal('Ошибка регистрации!')
+      }
+    } catch (err) {
+      showInfoModal('Во время выполнения запроса произошла ошибка')
+      console.log(err)
+    }
+  })
+}
+
+// const regModal = document.querySelector('#enter-modal')
+
 //Логика отправки данных авторизации серверу
+const enterModal = document.querySelector('#enter-modal')
 
 const enterForm = enterModal?.querySelector('.enter-form')
 const enterAction = enterForm?.action
@@ -95,6 +131,8 @@ if (resetModal) {
   const restoreAction = restoreForm.action
   restoreForm.addEventListener('submit', async (e) => {
     e.preventDefault()
+    const isRepeatValid = checkRepeatPasswords(e.currentTarget)
+    if (!isRepeatValid) return
     const restoreData = formToObj(serializeForm(e.currentTarget))
     const jsonData = JSON.stringify(restoreData)
 
@@ -105,7 +143,8 @@ if (resetModal) {
       const { status } = finishedResponse
 
       if (status === 'ok') {
-        getSmsCode(resetModal)
+        resetModal.classList.remove('_active')
+        accessResetModal.classList.add('_active')
       } else {
         showInfoModal('Ошибка восстановления пароля!')
       }
