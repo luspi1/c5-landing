@@ -1,16 +1,9 @@
-const today = new Date()
-const dd = String(today.getDate()).padStart(2, '0')
-const mm = String(today.getMonth() + 1).padStart(2, '0')
-const yyyy = today.getFullYear()
-
-const hh = today.getHours()
-const min = today.getMinutes()
-const ss = today.getSeconds()
+import { format } from 'date-fns'
 
 export const getCurrentDate = () => {
-  return `${dd}.${mm}.${yyyy}`
+  return format(new Date(), 'dd.MM.yyyy')
 }
 
 export const getCurrentTime = () => {
-  return `${hh}:${min}:${ss}`
+  return format(new Date(), 'HH:mm:ss')
 }
