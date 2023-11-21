@@ -1,4 +1,12 @@
 .documents-page {
+    .main-section {
+        max-width: 1010px;
+
+        @media (max-width: 1200px) {
+            width: 90vw;
+        }
+    }
+
     .main-title {
         margin-bottom: 20px;
     }
@@ -20,11 +28,21 @@
         display: flex;
         gap: 34px;
 
+        @media (max-width: 1200px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         form {
             display: flex;
             flex: 1;
             gap: 10px;
             justify-content: space-between;
+
+            @media (max-width: 1200px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
             .documents-type-select {
                 min-width: 220px;
@@ -42,6 +60,10 @@
 
     &__main-table {
         margin-bottom: 20px;
+        width: 960px;
+        max-width: 100%;
+        //overflow: auto;
+        overflow: hidden;
 
         .main-table__row {
             background-color: #fff;

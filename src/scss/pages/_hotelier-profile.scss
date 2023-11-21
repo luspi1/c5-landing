@@ -1,5 +1,11 @@
 .hotelier-profile-page {
 
+    .main-section-wrapper {
+        @media (max-width: 1000px) {
+            max-width: 90vw;
+        }
+    }
+
     .main-section {
         padding: 25px;
         border: none;
@@ -8,6 +14,10 @@
 
     .hotelier-info {
         display: flex;
+
+        @media (max-width: 1000px) {
+            flex-direction: column;
+        }
 
         &__avatar {
             margin-right: 20px;
@@ -53,12 +63,18 @@
             color: #004D9F;
 
 
-font-family: 'Open Sans', sans-serif;
-font-size: 15px;
-font-style: normal;
-font-weight: 600;
-line-height: 22px; /* 146.667% */
-text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 22px;
+            /* 146.667% */
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 1000px) {
+            flex-direction: column;
+            gap: 20px;
         }
     }
 }

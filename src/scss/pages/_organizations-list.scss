@@ -24,10 +24,21 @@
         font-weight: 600;
         line-height: 22px;
 
-        svg {
+        @media (max-width: 768px) {
+            margin-bottom: 15px;
+          }
 
+        svg {
             margin-right: 6px;
         }
+    }
+
+    
+    form {
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 20px;
+          }
     }
 
     &__search {
@@ -82,6 +93,13 @@
 
         &__pagination-row {
             padding: 8px 10px;
+
+            
+     
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;          
+          }    
         }
 
         &__row {
