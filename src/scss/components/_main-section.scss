@@ -6,6 +6,10 @@
     flex-grow: 1;
   }
 
+  @media (max-width: 900px) {
+    gap: 0px;
+    max-width: 90vw;
+  }
 }
 
 .main-section {
@@ -14,11 +18,14 @@
   //border: 1px solid #D0D5DF;
   //background: #F6F6F6;
 
-
   padding-top: 12px;
   padding-bottom: 30px;
   border: none;
   background: #fff;
+
+  @media (max-width: 900px) {
+    max-width: 90vw;
+  }
 
   &._add {
     margin-top: 20px;
@@ -31,9 +38,6 @@
     font-size: 15px;
     font-weight: 400;
     line-height: normal;
-
-
-
   }
 
   &__subtitle {
@@ -46,7 +50,6 @@
     // color: $black;
     // font-size: 23px;
     // margin-bottom: 30px;
-
 
     margin-bottom: 3px;
     @include book-bold;
@@ -142,8 +145,6 @@
     //margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid #D0D5DF;
-
-
     margin-top: 25px;
 
     &:first-of-type {
@@ -159,6 +160,10 @@
     input,
     select {
       width: 580px;
+
+      @media (max-width: 700px) {
+        max-width: 80vw;
+      }
     }
 
     &:not(:last-child) {
@@ -189,6 +194,10 @@
           transform: translateY(-50%);
         }
       }
+
+      @media (max-width: 1260px) {
+        flex-direction: column;
+      }
     }
 
     &__desc {
@@ -211,6 +220,10 @@
 
       textarea {
         width: 580px;
+
+        @media (max-width: 700px) {
+          max-width: 80vw;
+        }
       }
 
       label {

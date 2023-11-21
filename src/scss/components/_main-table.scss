@@ -6,6 +6,10 @@
   border: 1px solid #D0D5DF;
   margin: 10px 0;
 
+  @media (max-width: 970px) {
+    max-width: 90vw;
+  }
+
   .main-input {
     padding-top: 4px;
     padding-bottom: 4px;

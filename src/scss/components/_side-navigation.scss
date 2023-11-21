@@ -1,6 +1,10 @@
 .side-navigation {
   width: 200px;
 
+  @media screen and (max-width: 1024px) {
+    width: 0;
+  }
+
   &__item {
     cursor: pointer;
     @include opensans-semibold;
@@ -87,6 +91,101 @@
           color: #004d9f;
           padding: 6px 0;
         }
+      }
+    }
+  }
+
+  .menu-checkbox {
+    position: absolute;
+    opacity: 0;
+
+    &:checked {
+      ~.menu-button {
+        span {
+          transform: rotate(45deg);
+
+          &::before {
+            top: 0;
+            transform: rotate(0);
+            background-color: #fff;
+          }
+
+          &::after {
+            top: 0;
+            transform: rotate(90deg);
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-button {
+    display: none;
+    align-items: center;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+
+    @media (max-width: 860px) {
+      top: 100px;
+    }
+
+    @media (max-width: 400px) {
+      top: 20px;
+    }
+
+    span,
+    span::before,
+    span::after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      transition-duration: 0.25s;
+      z-index: 2000;
+    }
+
+    span::before {
+      top: -8px;
+    }
+
+    span::after {
+      top: 8px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .side-navigation__list {
+      display: none;
+    }
+
+    .menu-button {
+      display: flex;
+      z-index: 2000;
+    }
+
+    #menu-checkbox:checked~.side-navigation__list {
+      display: flex;
+      flex-direction: column;
+      top: 0;
+      right: 0;
+      transition-duration: 0.25s;
+      background-color: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      z-index: 1000;
+      padding: 50px 50px 30px 10px;
+      height: max-content;
+      color: #fff;
+
+      .side-navigation__item {
+        width: max-content;
+        min-width: 180px;
       }
     }
   }
