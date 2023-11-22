@@ -1,6 +1,11 @@
 #change-tariff-request-modal {
     width: 510px;
 
+
+    @media (max-width: 550px) {
+        width: 90vw;
+    }
+
     ._bold {
         font-weight: 700;
     }
@@ -34,6 +39,7 @@
 
         &__item-value {
             font-weight: 400;
+            text-align: center;
         }
     }
 

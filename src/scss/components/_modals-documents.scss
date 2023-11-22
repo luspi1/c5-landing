@@ -2,16 +2,34 @@
 #edit-document-modal {
     width: 510px;
 
+    @media (max-width: 550px) {
+        width: 90vw;
+    }
+
     select {
         padding: 10px;
     }
 
-    .main-input {
-        min-width: 425px;
+    .input-column-wrapper {
+        .main-input {
+            min-width: 425px;
+
+            @media (max-width: 550px) {
+                min-width: 80%;
+            }
+        }
     }
 
     .input-column-wrapper__row {
         display: flex;
+
+        @media (max-width: 550px) {
+            align-items: flex-start;
+
+            button {
+                order: -1;
+            }
+        }
     }
 
     .documents-block {
@@ -23,6 +41,19 @@
             font-size: 15px;
             font-weight: 600;
             line-height: normal;
+        }
+
+        .file-upload__info {
+
+            @media (max-width: 550px) {
+                flex-direction: column;
+
+                .file-upload__item-data,
+                .file-upload__delete-btn {
+                    position: static;
+                    height: auto;
+                }
+            }
         }
 
         .documents-list li {
@@ -64,7 +95,6 @@
     }
 
     .download-buttons {
-
         .input-column-wrapper {
             margin-bottom: 0;
         }
