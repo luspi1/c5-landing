@@ -1,6 +1,10 @@
 #change-login-modal {
     min-width: 540px;
 
+    @media (max-width: 550px) {
+        min-width: 90vw;
+    }
+
     h4 {
         margin-bottom: 10px;
     }
