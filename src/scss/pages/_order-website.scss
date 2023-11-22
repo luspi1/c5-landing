@@ -6,6 +6,14 @@
         padding-left: 10px;
         padding-right: 10px;
 
+        @media (max-width: 1270px) {
+            width: 70vw;
+        }
+
+        @media (max-width: 1020px) {
+            width: 90vw;
+        }
+
         .mb0 {
             margin-bottom: 0;
         }
@@ -36,6 +44,7 @@
     }
 
     &__photos-desc {
+
         margin-bottom: 15px;
 
         h6 {
@@ -165,6 +174,11 @@
             font-weight: 400;
             line-height: normal;
 
+
+            @media (max-width: 500px) {
+                padding: 20px 10px 15px;
+            }
+
             p {
                 margin: 16px 0 10px 0;
             }
@@ -184,6 +198,20 @@
     .main-controllers {
         button {
             height: 40px;
+        }
+    }
+
+    .logo-container {
+        @media (max-width: 1260px) {
+            .gray-bg {
+                margin: 0;
+            }
+        }
+    }
+
+    .choices__inner {
+        @media (max-width: 680px) {
+            width: max-content;
         }
     }
 }
