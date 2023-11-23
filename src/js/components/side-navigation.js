@@ -1,18 +1,14 @@
-const sideNavigationItems = document.querySelectorAll(
-  '.side-navigation__item-min',
-)
+const sideNavigation = document.querySelector('.side-navigation')
 
-const tabsToggler = (buttons) => {
-  buttons.forEach((item) => {
-    item.addEventListener('click', (e) => {
-      if (!e.currentTarget.classList.contains('_active')) {
-        buttons.forEach((item) => item.classList.remove('_active'))
-        e.currentTarget.classList.add('_active')
-      } else {
-        e.currentTarget.classList.remove('_active')
-      }
-    })
+if (sideNavigation) {
+  const sideNavigationItems = sideNavigation.querySelectorAll(
+    '.side-navigation__item-min',
+  )
+
+  sideNavigationItems.forEach((navItem) => {
+    const submenuTrigger = navItem.querySelector('.side-navigation__item-title')
+    submenuTrigger.addEventListener('click', () =>
+      navItem.classList.toggle('_active'),
+    )
   })
 }
-
-tabsToggler(sideNavigationItems)
