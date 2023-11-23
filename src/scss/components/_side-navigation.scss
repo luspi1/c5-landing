@@ -11,6 +11,14 @@
     font-size: 15px;
     line-height: normal;
 
+    &._active {
+      color: #004d9f;
+
+      svg path {
+        fill: #004d9f;
+      }
+    }
+
     svg {
       position: absolute;
       top: 12px;

@@ -17,16 +17,15 @@
   }
 
   &__info {
-
     margin-bottom: 15px;
     position: relative;
     padding: 9px 8px 12px 37px;
     border-radius: 5px;
-    background: #1154B9;
+    background: #1154b9;
 
-    color: #FFF;
+    color: #fff;
 
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 15px;
 
     font-weight: 500;
@@ -40,7 +39,6 @@
     }
 
     svg {
-
       position: absolute;
       top: 10px;
       left: 10px;
@@ -50,7 +48,6 @@
   .control-panel {
     display: flex;
     justify-content: space-between;
-    //gap: 5px;
     align-items: flex-start;
 
     @media (max-width: 1250px) {
@@ -60,11 +57,10 @@
     }
 
     &__password-change {
-
       padding: 5px 10px 7px 10px;
       border-radius: 5px;
       border: 1px dashed #868585;
-      font-family: 'Open Sans', sans-serif;
+      font-family: "Open Sans", sans-serif;
       font-size: 15px;
       font-weight: 400;
       line-height: 24px;
@@ -78,9 +74,9 @@
         width: 145px;
         padding: 5px 9px;
         border-radius: 3px;
-        background: #064AB1;
-        color: #FFF;
-        font-family: 'Open Sans', sans-serif;
+        background: #064ab1;
+        color: #fff;
+        font-family: "Open Sans", sans-serif;
         font-size: 15px;
         font-weight: 600;
         line-height: 1;
@@ -151,25 +147,41 @@
       }
 
       &:nth-child(2) {
-        max-width: 29%;
+        max-width: 25%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       &:nth-child(3) {
-        max-width: 17%;
-      }
-
-      &:nth-child(4) {
         max-width: 18%;
       }
 
+      &:nth-child(4) {
+        max-width: 20%;
+      }
+
       &:nth-child(5) {
-        max-width: 21%;
+        max-width: 18%;
       }
 
       &:nth-child(6) {
-        max-width: 13%;
-      }
+        max-width: 17%;
+        font-weight: 600;
 
+        span {
+          color: #12cc69;
+        }
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
+          display: block;
+          &:first-child {
+            margin-bottom: 5px;
+          }
+        }
+      }
     }
   }
 }
