@@ -61,20 +61,47 @@
 
         a {
             color: #004D9F;
-
-
             font-family: 'Open Sans', sans-serif;
             font-size: 15px;
             font-style: normal;
             font-weight: 600;
             line-height: 22px;
-            /* 146.667% */
             text-transform: uppercase;
         }
 
         @media (max-width: 1000px) {
             flex-direction: column;
             gap: 20px;
+        }
+
+
+        .tariff-info {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            button {
+                color: #A3A3A3;
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 22px;
+                text-transform: uppercase;
+            }
+
+            @media (max-width: 430px) {
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+        }
+
+        .current-tariff {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 24px;
+            text-transform: uppercase;
         }
     }
 }

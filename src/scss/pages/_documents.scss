@@ -11,6 +11,47 @@
         }
     }
 
+    &__info {
+        margin-bottom: 15px;
+        position: relative;
+        padding: 9px 8px 12px 37px;
+        border-radius: 5px;
+        background: #1154B9;
+        color: #FFF;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+
+        svg {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    }
+
+    .template-download-link {
+
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        svg {
+            position: static;
+        }
+
+        a {
+            text-decoration: underline;
+            font-weight: 700;
+        }
+    }
+
+
     .main-title {
         margin-bottom: 20px;
     }
