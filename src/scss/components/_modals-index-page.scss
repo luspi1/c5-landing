@@ -1,0 +1,47 @@
+.home-page {
+    .index-page-modal {
+        min-width: 1000px;
+        padding-top: 10px;
+
+        @media (max-width: 1200px) {
+            min-width: 90vw;
+        }
+
+        h3 {
+            font-family: "Book Antiqua";
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 37px;
+
+            @media (max-width: 1300px) {
+                padding-right: 30px;
+            }
+
+            @media (max-width: 600px) {
+                font-size: 25px;
+            }
+        }
+
+        .modal-close-btn {
+            right: 20px;
+            top: 25px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .service-description {
+            padding: 0px 30px 30px 10px;
+            line-height: 1.5;
+
+            @media (max-width: 600px) {
+                font-size: 15px;
+            }
+        }
+    }
+}
