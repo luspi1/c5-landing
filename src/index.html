@@ -10,6 +10,11 @@
       @include('partials/reset-password-modal.html')
       @include('partials/reg-access-modal.html')
       @include('partials/reset-access-modal.html')
+      @include('partials/organization-site-modal.html')
+      @include('partials/booking-system-modal.html')
+      @include('partials/aggregators-integration-modal.html')
+      @include('partials/objects-placement-modal.html')
+      @include('partials/connection-options-modal.html')
 
       <header>
         <div class="container">
@@ -95,21 +100,27 @@
           <section class="system-functions">
             <ul class="system-functions-list">
               <li class="system-functions-item">
-                <button>Организация сайта гостиницы и управление сайтом</button>
+                <button data-open-modal="organization-site-modal">
+                  Организация сайта гостиницы и управление сайтом
+                </button>
               </li>
               <li class="system-functions-item">
-                <button>Настраиваемая система бронирования</button>
+                <button data-open-modal="booking-system-modal">
+                  Настраиваемая система бронирования
+                </button>
               </li>
               <li class="system-functions-item">
-                <button>
+                <button data-open-modal="aggregators-integration-modal">
                   Интеграция с популяр-ными сервисами-агрега-торами
                 </button>
               </li>
               <li class="system-functions-item">
-                <button>Управление несколькими объектами размещения</button>
+                <button data-open-modal="objects-placement-modal">
+                  Управление несколькими объектами размещения
+                </button>
               </li>
               <li class="system-functions-item">
-                <button>
+                <button data-open-modal="connection-options-modal">
                   Несколько вариантов присоединения к&nbsp;системе
                 </button>
               </li>
