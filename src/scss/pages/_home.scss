@@ -469,36 +469,4 @@
       }
     }
   }
-
-  footer {
-    margin-bottom: 67px;
-    display: flex;
-    justify-content: space-between;
-    color: #949FAC;
-    text-align: right;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: normal;
-
-    @media (max-width: 520px) {
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-
-      div {
-        width: 100%;
-        text-align: left;
-        margin-bottom: 25px;
-      }
-    }
-
-    p:first-child {
-      margin-bottom: 10px;
-    }
-
-    p.footer-align-left {
-      text-align: left;
-      margin-bottom: 16px;
-    }
-  }
 }

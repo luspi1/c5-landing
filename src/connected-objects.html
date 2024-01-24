@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru" class="page" xmlns="http://www.w3.org/1999/html">
+  @include('partials/head.html', { 'title': 'С-5' })
+
+  <body class="page__body connected-objects-page">
+    <div class="site-container">
+      <div class="modal-overlay"></div>
+
+      <header>
+        <div class="main-menu-container">
+          <div class="main-menu">
+            <a class="main-menu__logo" href="index.html">
+              <img class="blue-logo" src="img/blue-logo.svg" alt="Логотип" />
+            </a>
+
+            <input class="menu-checkbox" id="menu-checkbox" type="checkbox" />
+            <label class="menu-button" for="menu-checkbox">
+              <span></span>
+            </label>
+
+            <div class="main-menu__links">
+              <nav class="main-menu__nav">
+                <ul>
+                  <li>
+                    <a href="#">О проекте</a>
+                  </li>
+                  <li class="nav-item_active">
+                    <a href="#">Объекты</a>
+                  </li>
+                  <li>
+                    <a href="#">Тарифы</a>
+                  </li>
+                  <li>
+                    <a href="#">Контакты</a>
+                  </li>
+                  <li>
+                    <a href="#">Партнеры</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="main-menu__personal">
+                <button
+                  class="main-menu__auth-btn"
+                  data-open-modal="registration-modal"
+                >
+                  Войти
+                  <svg
+                    width="26"
+                    height="25"
+                    viewBox="0 0 26 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.7656 0C5.84896 0 0.265625 5.58333 0.265625 12.5C0.265625 19.4167 5.84896 25 12.7656 25C19.6823 25 25.2656 19.4167 25.2656 12.5C25.2656 5.58333 19.599 0 12.7656 0ZM12.7656 3.75C15.0156 3.75 16.9323 5.58333 16.9323 7.91667C16.9323 10.1667 15.099 12.0833 12.7656 12.0833C10.5156 12.0833 8.59896 10.25 8.59896 7.91667C8.59896 5.58333 10.4323 3.75 12.7656 3.75ZM12.7656 21.75C10.5156 21.75 8.43233 20.9167 6.76567 19.5833C6.349 19.25 6.18237 18.75 6.18237 18.25C6.18237 15.9167 8.01571 14.0833 10.349 14.0833H15.1823C17.5156 14.0833 19.349 15.9167 19.349 18.25C19.349 18.75 19.099 19.25 18.7657 19.5833C17.099 20.9167 15.0156 21.75 12.7656 21.75Z"
+                      fill="url(#paint0_linear_1451_12)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1451_12"
+                        x1="5.93022"
+                        y1="-19.5"
+                        x2="62.4353"
+                        y2="1.11679"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#133A62" />
+                        <stop offset="1" stop-color="#3090F6" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="container">
+          <div class="content-wrapper">
+            <h1 class="main-title">Все подключенные объекты</h1>
+
+            <ul class="main-table">
+              <li class="main-table__row main-table__title-row">
+                <div class="main-table__cell order-cell">
+                  <span>№</span>
+                </div>
+                <p class="main-table__cell title-cell">
+                  <input class="search title-search" type="search" placeholder="поиск по названию" />
+                </p>
+                <p class="main-table__cell country-cell">Страна</p>
+                <p class="main-table__cell region-cell">
+                  <input class="search region-search" type="search" placeholder="поиск по региону" />
+                </p>
+                <p class="main-table__cell type-cell">Тип Объекта</p>
+              </li>
+
+              <li class="main-table__row">
+                <div class="main-table__cell order-cell">
+                  <span>1</span>
+                </div>
+                <p class="main-table__cell title-cell">
+                  Название первое полное или нет
+                </p>
+
+                <p class="main-table__cell country-cell">Россия</p>
+                <p class="main-table__cell region-cell">Тамбовская область</p>
+                <p class="main-table__cell type-cell">Гостиница</p>
+              </li>
+
+              <li class="main-table__row">
+                <div class="main-table__cell order-cell">
+                  <span>2</span>
+                </div>
+                <p class="main-table__cell title-cell">
+                  Название первое полное или нет
+                </p>
+
+                <p class="main-table__cell country-cell">Узбекистан</p>
+                <p class="main-table__cell region-cell">Ташкент</p>
+                <p class="main-table__cell type-cell">Гостиница, Санаторий</p>
+              </li>
+
+              <li class="main-table__row">
+                <div class="main-table__cell order-cell">
+                  <span>3</span>
+                </div>
+                <p class="main-table__cell title-cell">
+                  Название первое полное или нет
+                </p>
+
+                <p class="main-table__cell country-cell">Узбекистан</p>
+                <p class="main-table__cell region-cell">Самарканд</p>
+                <p class="main-table__cell type-cell">Парк-Отель, Гостиница</p>
+              </li>
+
+              <li class="main-table__row">
+                <div class="main-table__cell order-cell">
+                  <span>4</span>
+                </div>
+                <p class="main-table__cell title-cell">
+                  Название первое полное или нет
+                </p>
+
+                <p class="main-table__cell country-cell">Россия</p>
+                <p class="main-table__cell region-cell">Липецк</p>
+                <p class="main-table__cell type-cell">Гостиница</p>
+              </li>
+
+              <li class="main-table__row">
+                <div class="main-table__cell order-cell">
+                  <span>5</span>
+                </div>
+                <p class="main-table__cell title-cell">
+                  Название первое полное или нет
+                </p>
+
+                <p class="main-table__cell country-cell">Эстония</p>
+                <p class="main-table__cell region-cell">Таллин</p>
+                <p class="main-table__cell type-cell">Гостиница, Хостел</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer container">
+        <div>
+          <p class="footer-align-left">© НПО ТАУ 2022-2023</p>
+          <a class="footer-link" href="#">Правовая информация</a>
+        </div>
+
+        <div>
+          <p>Принимаем к оплате</p>
+          <svg
+            width="237"
+            height="25"
+            viewBox="0 0 237 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g opacity="0.4">
+              <mask
+                id="mask0_551_44"
+                style="mask-type: luminance"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="2"
+                width="69"
+                height="22"
+              >
+                <path
+                  d="M35.234 9.03329C35.1951 12.0978 37.965 13.8081 40.0517 14.8248C42.1957 15.8681 42.9157 16.5371 42.9076 17.47C42.8912 18.8979 41.1973 19.528 39.6119 19.5525C36.846 19.5955 35.238 18.8058 33.9594 18.2085L32.9632 22.8707C34.2459 23.462 36.621 23.9775 39.0841 24C44.8654 24 48.6479 21.1462 48.6684 16.7212C48.6909 11.1056 40.9007 10.7947 40.9539 8.28455C40.9723 7.52353 41.6985 6.71136 43.2901 6.50474C44.0777 6.40041 46.2524 6.32063 48.7175 7.45602L49.6851 2.94514C48.3595 2.46234 46.6554 2 44.5339 2C39.0922 2 35.2646 4.89269 35.234 9.03329ZM58.9831 2.38869C57.9275 2.38869 57.0376 3.00447 56.6407 3.9496L48.382 23.6686H54.1592L55.3089 20.4915H62.3688L63.0357 23.6686H68.1276L63.6842 2.38869H58.9831ZM59.7911 8.13725L61.4584 16.128H56.8923L59.7911 8.13725ZM28.2293 2.38869L23.6755 23.6686H29.1806L33.7324 2.38869H28.2293ZM20.0852 2.38869L14.355 16.8726L12.0372 4.55719C11.7651 3.18244 10.6911 2.38869 9.49843 2.38869H0.130939L0 3.00651C1.92301 3.42384 4.10786 4.0969 5.43146 4.817C6.24158 5.25684 6.47275 5.64144 6.73869 6.68682L11.1289 23.6686H16.947L25.8665 2.38869H20.0852Z"
+                  fill="white"
+                />
+              </mask>
+              <g mask="url(#mask0_551_44)">
+                <path
+                  d="M-7.13281 4.62708L59.993 -20.0938L75.2639 21.3729L8.13872 46.0938"
+                  fill="#949FAC"
+                />
+              </g>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M179.459 2V2.00961C179.449 2.00961 176.423 2 175.616 4.8917C174.876 7.54323 172.792 14.8638 172.734 15.0655H172.158C172.158 15.0655 170.025 7.58166 169.275 4.8821C168.468 1.99039 165.433 2 165.433 2H158.516V24H165.433V10.9345H165.721H166.009L170.044 24H174.848L178.882 10.9441H179.459V24H186.376V2H179.459Z"
+                fill="#949FAC"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M204.723 2C204.723 2 202.696 2.18253 201.745 4.30568L196.845 15.0655H196.269V2H189.352V24H195.884C195.884 24 198.007 23.8079 198.959 21.6943L203.762 10.9345H204.338V24H211.255V2H204.723Z"
+                fill="#949FAC"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M214.332 11.9912V23.9999H221.249V16.9868H228.743C232.009 16.9868 234.776 14.9021 235.804 11.9912H214.332Z"
+                fill="#949FAC"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M228.744 2H213.363C214.132 6.18865 217.273 9.55109 221.337 10.6463C222.259 10.8961 223.23 11.0306 224.229 11.0306H236.084C236.189 10.531 236.238 10.0218 236.238 9.49345C236.238 5.35284 232.885 2 228.744 2Z"
+                fill="#949FAC"
+              />
+              <path
+                opacity="0.8"
+                d="M108.424 12.5254C108.424 10.6337 108.853 8.76653 109.68 7.06499C110.506 5.36345 111.709 3.87196 113.196 2.70314C111.357 1.25351 109.146 0.350997 106.818 0.0988695C104.489 -0.153258 102.137 0.255186 100.03 1.27746C97.9225 2.29974 96.1457 3.89456 94.9025 5.87944C93.6593 7.86431 93 10.1591 93 12.5011C93 14.8432 93.6593 17.1379 94.9025 19.1228C96.1457 21.1077 97.9225 22.7025 100.03 23.7248C102.137 24.7471 104.489 25.1555 106.818 24.9034C109.146 24.6512 111.357 23.7487 113.196 22.2991C111.708 21.1419 110.504 19.6595 109.677 17.9654C108.85 16.2714 108.422 14.4105 108.424 12.5254Z"
+                fill="#949FAC"
+              />
+              <path
+                d="M117.951 12.4992C117.951 10.6135 117.524 8.75224 116.702 7.05502C115.88 5.3578 114.685 3.86865 113.206 2.69922H113.194C111.706 3.86876 110.503 5.36096 109.677 7.06318C108.85 8.7654 108.421 10.6332 108.422 12.5255C108.419 14.4107 108.848 16.2715 109.675 17.9655C110.502 19.6596 111.705 21.142 113.194 22.2992L113.143 22.3356H113.194L113.177 22.3235C114.665 21.1543 115.868 19.6625 116.695 17.9607C117.522 16.2588 117.951 14.3914 117.951 12.4992Z"
+                fill="#949FAC"
+              />
+              <path
+                opacity="0.8"
+                d="M133.382 12.5257C133.381 14.8682 132.721 17.1631 131.477 19.1481C130.233 21.133 128.456 22.7278 126.348 23.75C124.241 24.7722 121.888 25.1805 119.559 24.9283C117.23 24.6761 115.02 23.7735 113.18 22.3237C114.667 21.1543 115.869 19.6625 116.695 17.9609C117.522 16.2593 117.951 14.3922 117.951 12.5005C117.951 10.6087 117.522 8.74164 116.695 7.04003C115.869 5.33841 114.667 3.84666 113.18 2.67724C115.023 1.2248 117.238 0.321564 119.572 0.0712164C121.905 -0.179131 124.262 0.233557 126.371 1.26191C128.481 2.29026 130.257 3.89259 131.497 5.88496C132.737 7.87733 133.391 10.179 133.382 12.5257Z"
+                fill="#949FAC"
+              />
+            </g>
+          </svg>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
