@@ -2,7 +2,7 @@
 <html lang="ru" class="page" xmlns="http://www.w3.org/1999/html">
   @include('partials/head.html', { 'title': 'Заказать сайт'})
 
-  <body class="page__body order-website-page">
+  <body class="page__body order-website-page _tariff-blocked">
     <div class="site-container">
       <div class="modal-overlay"></div>
       @include('partials/change-login-modal.html')
@@ -208,7 +208,7 @@
               </ul>
             </nav>
 
-            <form class="main-section-wrapper__right">
+            <form class="order-site-form main-section-wrapper__right">
               <div class="main-section">
                 <div class="main-section-container">
                   <h1 class="main-title">Заказать сайт</h1>
@@ -501,7 +501,6 @@
                           <div class="centering-block">
                             <input
                               class="main-input"
-                              type="url"
                               placeholder="домен сайта"
                               name="website_address"
                             />
@@ -594,7 +593,7 @@
                     <div class="input-column-wrapper">
                       <label>Платежный сервис</label>
                       <div class="centering-block">
-                        <select class="main-input" name="website_tariff">
+                        <select class="main-input" name="payment_service_name">
                           <option value="0">
                             Сбербанк для юридических лиц
                           </option>
@@ -619,7 +618,7 @@
                           class="main-input"
                           type="text"
                           placeholder="ID организации"
-                          name="id"
+                          name="payment_service_acquiring_id"
                         />
                         <p class="inputs-row__desc">
                           ID (уникальный номер) Вашей организации как клиента
@@ -637,7 +636,7 @@
                         <textarea
                           class="main-textarea"
                           placeholder="Уникальный ключ-токен"
-                          name="hotelier_desc"
+                          name="payment_service_token_key"
                           required
                         ></textarea>
                         <p class="inputs-row__desc">
@@ -649,7 +648,9 @@
                   </div>
                 </div>
 
-                <div class="main-section__item payment-block">
+                <div
+                  class="main-section__item payment-block generate-select-wrapper"
+                >
                   <h4>API агрегатора бронирования</h4>
                   <p class="subtitle-text">
                     Здесь подключается один или несколько агрегаторов
@@ -658,13 +659,16 @@
                     проживания из внешних систем.
                   </p>
 
-                  <ul data-list="changeable">
-                    <li>
+                  <ul data-list="changeable" data-changeable-id="true">
+                    <li data-content="1">
                       <div class="inputs-row">
                         <div class="input-column-wrapper">
                           <label>Название агрегатора</label>
-                          <div class="centering-block">
-                            <select class="main-input" name="website_tariff">
+                          <div
+                            class="centering-block generate-select"
+                            data-template="agregator"
+                          >
+                            <select class="main-input" name="agregator_name">
                               <option value="0">Ostrovok.ru</option>
                               <option value="1">Пункт 2</option>
                             </select>
@@ -689,7 +693,7 @@
                               class="main-input"
                               type="text"
                               placeholder="ID организации"
-                              name="id"
+                              name="agregator_partner_id"
                             />
                             <p class="inputs-row__desc">
                               ID (уникальный номер) Вашей организации как
@@ -707,7 +711,7 @@
                             <textarea
                               class="main-textarea"
                               placeholder="Уникальный ключ-токен"
-                              name="hotelier_desc"
+                              name="agregator_token_key"
                               required
                             ></textarea>
                             <p class="inputs-row__desc">
@@ -760,7 +764,11 @@
 
               <div class="main-controllers">
                 <div class="main-controllers__btns-left">
-                  <button class="main-btn _dark-blue" type="submit">
+                  <button
+                    class="main-btn _dark-blue"
+                    type="submit"
+                    id="sendFormButton"
+                  >
                     Сохранить и закрыть
                   </button>
                   <a href="#" class="main-btn _outline-blue"
@@ -781,12 +789,15 @@
     @include('partials/info-modal.html') @include('partials/big-img-modal.html')
 
     <template id="agregator">
-      <li>
+      <li data-content="1">
         <div class="inputs-row">
           <div class="input-column-wrapper">
             <label>Название агрегатора</label>
-            <div class="centering-block">
-              <select class="main-input" name="website_tariff">
+            <div
+              class="centering-block generate-select changeable-input"
+              data-template="agregator"
+            >
+              <select class="main-input" name="agregator_name">
                 <option value="0">Ostrovok.ru</option>
                 <option value="1">Пункт 2</option>
               </select>
@@ -803,12 +814,12 @@
         <div class="inputs-row">
           <div class="input-column-wrapper">
             <label>ID организации-партнера агрегатора</label>
-            <div class="centering-block">
+            <div class="centering-block changeable-input">
               <input
                 class="main-input"
                 type="text"
                 placeholder="ID организации"
-                name="id"
+                name="agregator_partner_id"
               />
               <p class="inputs-row__desc">
                 ID (уникальный номер) Вашей организации как партнера агрегатора
@@ -822,11 +833,11 @@
         <div class="inputs-row _textarea">
           <div class="input-column-wrapper">
             <label>Уникальный ключ-токен</label>
-            <div class="centering-block">
+            <div class="centering-block changeable-input">
               <textarea
                 class="main-textarea"
                 placeholder="Уникальный ключ-токен"
-                name="hotelier_desc"
+                name="agregator_token_key"
                 required
               ></textarea>
               <p class="inputs-row__desc">

@@ -1,6 +1,66 @@
 .order-website-page {
     padding-bottom: 190px;
 
+    &._tariff-blocked {
+        .disabled-block {
+            opacity: 0.7;
+            background: #F3F5F6;
+            pointer-events: none;
+        }
+
+        .choose-tariff-modal {
+            display: block;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            opacity: 1;
+            padding: 30px 40px 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 400px;
+            border-radius: 5px;
+            background: #FFF;
+            box-shadow: 0px 0px 30px 0px rgba(13, 35, 57, 0.15);
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+
+            @media (max-width: 500px) {
+                padding: 20px 10px 15px;
+            }
+
+            p {
+                margin: 16px 0 10px 0;
+            }
+
+            a {
+                display: inline-block;
+                padding: 8px 14px;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 22px;
+            }
+        }
+
+        .payment-block {
+            display: none;
+        }
+
+        .page-footer-text {
+            border: none;
+        }
+    }
+
     .main-section {
         width: 1010px;
         padding-left: 10px;
@@ -155,8 +215,6 @@
         display: none;
     }
 
-
-
     .main-controllers {
         button {
             height: 40px;
@@ -194,6 +252,10 @@
         ._textarea {
             margin-bottom: 2px;
 
+            textarea {
+                border: 1px solid #ADB9C7;
+            }
+
             label {
                 margin-top: 0;
             }
@@ -214,6 +276,9 @@
             margin-bottom: 20px;
             padding-bottom: 25px;
             border-bottom: 1px solid #D0D5DF;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
         }
 
         .add-agregator-button {
@@ -227,8 +292,6 @@
             border-radius: 3px;
             background: #064AB1;
         }
-
-        
     }
 
     .page-footer-text {
@@ -238,62 +301,5 @@
         font-size: 15px;
         font-weight: 300;
         line-height: 1.5;
-    }
-}
-
-
-._tariff-blocked {
-    .disabled-block {
-        opacity: 0.7;
-        background: #F3F5F6;
-        pointer-events: none;
-    }
-
-    .choose-tariff-modal {
-        display: block;
-        position: absolute;
-        top: 30px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        opacity: 1;
-        padding: 30px 40px 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        max-width: 400px;
-        border-radius: 5px;
-        background: #FFF;
-        box-shadow: 0px 0px 30px 0px rgba(13, 35, 57, 0.15);
-        text-align: center;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-
-
-        @media (max-width: 500px) {
-            padding: 20px 10px 15px;
-        }
-
-        p {
-            margin: 16px 0 10px 0;
-        }
-
-        a {
-            display: inline-block;
-            padding: 8px 14px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 15px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 22px;
-        }
-    }
-
-    .payment-block {
-        display: none;
     }
 }

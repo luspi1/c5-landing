@@ -1,3 +1,6 @@
+import { updateChangeableListId } from '../_functions'
+import { initGenerateSelect } from './generateSelect'
+
 const changeableLists = document.querySelectorAll('ul[data-list="changeable"]')
 
 if (changeableLists) {
@@ -6,6 +9,8 @@ if (changeableLists) {
     list.addEventListener('click', (e) => {
       if (e.target.dataset.btn === 'delete') {
         e.target.closest('li').remove()
+
+        updateChangeableListId(list)
       }
     })
   })
@@ -25,6 +30,9 @@ if (addToListBtns) {
         'ul[data-list="changeable"]',
       )
       targetChangeableList.appendChild(templateElement)
+
+      updateChangeableListId(targetChangeableList)
+      initGenerateSelect()
     })
   })
 }
