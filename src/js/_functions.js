@@ -60,3 +60,65 @@ export const checkRepeatPasswords = (checkForm) => {
     return true
   }
 }
+
+const formatChangeableInputName = (name, id) => {
+  const initialName = name.split('[')[0]
+  return `${initialName}[${id}]`
+}
+
+const formatChangeableSelects = (name, id) => {
+  const initialName = name.split('[')
+  initialName[1] = `${id - 1}]`
+  return initialName.join('[')
+}
+
+export const updateInputsId = (input, changeableId) => {
+  const currentInput = input.querySelector('input, select, textarea') ?? input
+  const inputLabel = input.querySelector('label')
+  currentInput.name = formatChangeableInputName(currentInput.name, changeableId)
+  if (currentInput.id) {
+    const initialId = currentInput.id.split('[')[0]
+    currentInput.id = `${initialId}[${changeableId}]`
+  }
+  if (inputLabel?.getAttribute('for')) {
+    const attrValue = inputLabel.getAttribute('for')
+    const initialLabel = attrValue.split('[')[0]
+    inputLabel.setAttribute('for', `${initialLabel}[${changeableId}]`)
+  }
+}
+
+// Обновление id в изменяемых списках
+export const updateChangeableListId = (changeableList) => {
+  if (changeableList && changeableList.dataset.changeableId) {
+    const changeableElements = Array.from(changeableList.children)
+    changeableElements.forEach((el, i) => {
+      const changeableId = i + 1
+
+      const changeableAmount = el.querySelector('.changeable-amount')
+      const changeableInputs = el.querySelectorAll('.changeable-input')
+      const changeableSelects = el.querySelectorAll(
+        '.generate-select__list select',
+      )
+      const inputIdInfo = el.querySelector('.changeable-input-id')
+
+      if (changeableAmount) {
+        changeableAmount.textContent = changeableId
+      }
+      if (inputIdInfo) {
+        inputIdInfo.value = changeableId
+      }
+
+      if (changeableInputs) {
+        changeableInputs.forEach((inputEl) =>
+          updateInputsId(inputEl, changeableId),
+        )
+      }
+
+      if (changeableSelects) {
+        changeableSelects.forEach((selectEl) => {
+          selectEl.name = formatChangeableSelects(selectEl.name, changeableId)
+        })
+      }
+    })
+  }
+}
