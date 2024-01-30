@@ -493,7 +493,7 @@
                     </div>
                   </div>
 
-                  <div class="choose-tariff-block _tariff-blocked">
+                  <div class="choose-tariff-block">
                     <div class="disabled-block">
                       <div class="inputs-row">
                         <div class="input-column-wrapper">
@@ -581,7 +581,183 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="main-section__item payment-block">
+                  <h4>Платежная система</h4>
+                  <p class="subtitle-text">
+                    Подключите платежную систему для того, чтобы иметь
+                    возможность принимать плату от Ваших Гостей (постояльцев)
+                    через платежные системы в сети Интернет
+                  </p>
+
+                  <div class="inputs-row small-margin">
+                    <div class="input-column-wrapper">
+                      <label>Платежный сервис</label>
+                      <div class="centering-block">
+                        <select class="main-input" name="website_tariff">
+                          <option value="0">
+                            Сбербанк для юридических лиц
+                          </option>
+                          <option value="1">Пункт 2</option>
+                        </select>
+                        <p class="inputs-row__desc">
+                          Если Вы выберите платежный сервис, уже предусмотренный
+                          нашей системой, Вам достаточно будет ввести данные в
+                          предустановленный набор полей. Если такого сервиса в
+                          списке нет, <br />
+                          <a class="link" href="#">обратитесь в поддержку.</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="inputs-row small-margin">
+                    <div class="input-column-wrapper">
+                      <label>ID организации-клиента эквайринга</label>
+                      <div class="centering-block">
+                        <input
+                          class="main-input"
+                          type="text"
+                          placeholder="ID организации"
+                          name="id"
+                        />
+                        <p class="inputs-row__desc">
+                          ID (уникальный номер) Вашей организации как клиента
+                          эфкваринга Сбербанка для юридических лиц расположен в
+                          кабинете Вашей организации в Сбербанке.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="inputs-row _textarea">
+                    <div class="input-column-wrapper">
+                      <label>Уникальный ключ-токен</label>
+                      <div class="centering-block">
+                        <textarea
+                          class="main-textarea"
+                          placeholder="Уникальный ключ-токен"
+                          name="hotelier_desc"
+                          required
+                        ></textarea>
+                        <p class="inputs-row__desc">
+                          Уникальный ключ Вы можете получить в кабинете Вашей
+                          организации в Сбербанке.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="main-section__item payment-block">
+                  <h4>API агрегатора бронирования</h4>
+                  <p class="subtitle-text">
+                    Здесь подключается один или несколько агрегаторов
+                    бронирования, таких, как Ostrovok.ru. Этот шаг требуется в
+                    случае, если Вы планируете получать заказы на бронирование
+                    проживания из внешних систем.
+                  </p>
+
+                  <ul data-list="changeable">
+                    <li>
+                      <div class="inputs-row">
+                        <div class="input-column-wrapper">
+                          <label>Название агрегатора</label>
+                          <div class="centering-block">
+                            <select class="main-input" name="website_tariff">
+                              <option value="0">Ostrovok.ru</option>
+                              <option value="1">Пункт 2</option>
+                            </select>
+                            <p class="inputs-row__desc">
+                              Если Вы выберите агрегатора, уже предусмотренного
+                              нашей системой, Вам достаточно будет ввести данные
+                              в предустановленный набор полей. Если такого
+                              агрегатора в списке нет,
+                              <a class="link" href="#"
+                                >обратитесь в поддержку.</a
+                              >
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="inputs-row">
+                        <div class="input-column-wrapper">
+                          <label>ID организации-партнера агрегатора</label>
+                          <div class="centering-block">
+                            <input
+                              class="main-input"
+                              type="text"
+                              placeholder="ID организации"
+                              name="id"
+                            />
+                            <p class="inputs-row__desc">
+                              ID (уникальный номер) Вашей организации как
+                              партнера агрегатора бронирования находится в
+                              кабинете Вашей организации на сайте агрегатора.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="inputs-row _textarea">
+                        <div class="input-column-wrapper">
+                          <label>Уникальный ключ-токен</label>
+                          <div class="centering-block">
+                            <textarea
+                              class="main-textarea"
+                              placeholder="Уникальный ключ-токен"
+                              name="hotelier_desc"
+                              required
+                            ></textarea>
+                            <p class="inputs-row__desc">
+                              Уникальный ключ Вы можете получить в кабинете
+                              Вашей организации на сайте агрегатора.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="delete-agregator" data-btn="delete">
+                        <svg
+                          width="11"
+                          height="11"
+                          viewBox="0 0 11 11"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M1.15015 1.15015C1.24628 1.05401 1.37668 1 1.51264 1C1.64859 1 1.77898 1.05401 1.87512 1.15015L5.5 4.77502L9.12488 1.15015C9.22101 1.05401 9.3514 1 9.48736 1C9.62332 1 9.75371 1.05401 9.84985 1.15015C9.94599 1.24629 10 1.37668 10 1.51264C10 1.64859 9.94599 1.77899 9.84985 1.87512L6.22497 5.5L9.84985 9.12488C9.94599 9.22101 10 9.3514 10 9.48736C10 9.62332 9.94599 9.75371 9.84985 9.84985C9.75371 9.94599 9.62332 10 9.48736 10C9.3514 10 9.22101 9.94599 9.12488 9.84985L5.5 6.22498L1.87512 9.84985C1.77898 9.94599 1.64859 10 1.51264 10C1.37668 10 1.24628 9.94599 1.15015 9.84985C1.05401 9.75371 1 9.62332 1 9.48736C1 9.3514 1.05401 9.22101 1.15015 9.12488L4.77502 5.5L1.15015 1.87512C1.05401 1.77899 1 1.64859 1 1.51264C1 1.37668 1.05401 1.24629 1.15015 1.15015Z"
+                            fill="#920303"
+                            stroke="#920303"
+                            stroke-width="0.5"
+                          />
+                        </svg>
+
+                        Удалить агрегатора
+                      </button>
+                    </li>
+                  </ul>
+
+                  <button
+                    class="add-agregator-button"
+                    type="button"
+                    data-btn="add"
+                    data-template="agregator"
+                  >
+                    Добавить еще одного агрегатора
+                  </button>
+                </div>
+
+                <p class="page-footer-text">
+                  Параметры сайта: адрес сайта, адрес системы управления, логин
+                  и пароль администратора и другие данные будут отправлены Вам
+                  на электронную почту после того, как система создаст сайт и
+                  разместит его на сервере.
+                </p>
               </div>
+
               <div class="main-controllers">
                 <div class="main-controllers__btns-left">
                   <button class="main-btn _dark-blue" type="submit">
@@ -603,5 +779,84 @@
       </main>
     </div>
     @include('partials/info-modal.html') @include('partials/big-img-modal.html')
+
+    <template id="agregator">
+      <li>
+        <div class="inputs-row">
+          <div class="input-column-wrapper">
+            <label>Название агрегатора</label>
+            <div class="centering-block">
+              <select class="main-input" name="website_tariff">
+                <option value="0">Ostrovok.ru</option>
+                <option value="1">Пункт 2</option>
+              </select>
+              <p class="inputs-row__desc">
+                Если Вы выберите агрегатора, уже предусмотренного нашей
+                системой, Вам достаточно будет ввести данные в предустановленный
+                набор полей. Если такого агрегатора в списке нет,
+                <a class="link" href="#">обратитесь в поддержку.</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="inputs-row">
+          <div class="input-column-wrapper">
+            <label>ID организации-партнера агрегатора</label>
+            <div class="centering-block">
+              <input
+                class="main-input"
+                type="text"
+                placeholder="ID организации"
+                name="id"
+              />
+              <p class="inputs-row__desc">
+                ID (уникальный номер) Вашей организации как партнера агрегатора
+                бронирования находится в кабинете Вашей организации на сайте
+                агрегатора.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="inputs-row _textarea">
+          <div class="input-column-wrapper">
+            <label>Уникальный ключ-токен</label>
+            <div class="centering-block">
+              <textarea
+                class="main-textarea"
+                placeholder="Уникальный ключ-токен"
+                name="hotelier_desc"
+                required
+              ></textarea>
+              <p class="inputs-row__desc">
+                Уникальный ключ Вы можете получить в кабинете Вашей организации
+                на сайте агрегатора.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="delete-agregator" data-btn="delete">
+          <svg
+            width="11"
+            height="11"
+            viewBox="0 0 11 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1.15015 1.15015C1.24628 1.05401 1.37668 1 1.51264 1C1.64859 1 1.77898 1.05401 1.87512 1.15015L5.5 4.77502L9.12488 1.15015C9.22101 1.05401 9.3514 1 9.48736 1C9.62332 1 9.75371 1.05401 9.84985 1.15015C9.94599 1.24629 10 1.37668 10 1.51264C10 1.64859 9.94599 1.77899 9.84985 1.87512L6.22497 5.5L9.84985 9.12488C9.94599 9.22101 10 9.3514 10 9.48736C10 9.62332 9.94599 9.75371 9.84985 9.84985C9.75371 9.94599 9.62332 10 9.48736 10C9.3514 10 9.22101 9.94599 9.12488 9.84985L5.5 6.22498L1.87512 9.84985C1.77898 9.94599 1.64859 10 1.51264 10C1.37668 10 1.24628 9.94599 1.15015 9.84985C1.05401 9.75371 1 9.62332 1 9.48736C1 9.3514 1.05401 9.22101 1.15015 9.12488L4.77502 5.5L1.15015 1.87512C1.05401 1.77899 1 1.64859 1 1.51264C1 1.37668 1.05401 1.24629 1.15015 1.15015Z"
+              fill="#920303"
+              stroke="#920303"
+              stroke-width="0.5"
+            />
+          </svg>
+
+          Удалить агрегатора
+        </button>
+      </li>
+    </template>
   </body>
 </html>
