@@ -95,13 +95,14 @@ textarea {
 }
 
 .container {
+  // border: 3px solid pink;
   margin: 0 auto;
-  max-width: 1250px;
-  padding: 0 15px;
+  max-width: 1220px;
+  // padding: 0 15px;
 
-  @media (max-width: 500px) {
-    padding: 0 5px;
-  }
+  // @media (max-width: 500px) {
+  //   padding: 0 5px;
+  // }
 }
 
 .trim-string {

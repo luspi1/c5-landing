@@ -1,13 +1,10 @@
 .modal:not(.info-modal) {
-  padding: 25px 30px;
-  background: #f3f5f6;
-  box-shadow: 0 0 30px 0 rgba(19, 58, 98, 0.25);
   position: fixed;
   overflow-y: auto;
   overflow-x: hidden;
   left: 50%;
   top: 50%;
-  width: 485px;
+  width: 610px;
   transform: translate(-50%, -50%);
   transition: all 0.2s;
   opacity: 0;
@@ -17,8 +14,21 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 
+  border-radius: 10px;
+
   &::-webkit-scrollbar {
     width: 0;
+  }
+
+  .container {
+    width: 550px;
+    margin-left: 0;
+    background: #fff;
+    border-radius: 10px;
+  }
+
+  .form-wrapper {
+    padding: 26px 26px 20px 28px;
   }
 
   &._active {
@@ -28,20 +38,32 @@
   }
 
   h4 {
-    margin-bottom: 16px;
-    line-height: normal;
+    margin-bottom: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     font-size: 30px;
-    @include book-bold;
   }
 
   .input-column-wrapper {
     margin-right: 0;
     margin-bottom: 20px;
+
+    input {
+      border: 1px solid #6DB4F5;
+      border-radius: 5px;
+    }
+
     label {
       margin-bottom: 6px;
       @include opensans-semibold;
       font-size: 15px;
       line-height: normal;
+
+      span {
+        margin-left: 0px;
+        display: inline-block;
+        color: #FF6716;
+      }
     }
   }
 
@@ -51,13 +73,14 @@
     @include opensans-semibold;
   }
 
-  .text {
-    margin-top: -5px;
+  .pass-text {
     margin-bottom: 15px;
-    color: #2d3231;
+    max-width: 425px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
     font-size: 13px;
-    font-weight: 300;
-    line-height: normal;
+    line-height: 18px;
+    color: #1D1B1B;
   }
 
   .main-checkbox {
@@ -72,14 +95,12 @@
       line-height: 18px;
       font-family: "Open Sans", sans-serif;
       font-size: 15px;
-
       font-weight: 600;
     }
 
     label {
       font-weight: 400;
       display: block;
-
       text-indent: -22px;
       padding-left: 22px;
     }
@@ -87,10 +108,8 @@
 
   .submit-btn {
     margin-bottom: 15px;
-
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
-
     font-weight: 600;
     line-height: 22px;
     padding: 10px 15px;
@@ -98,10 +117,8 @@
 
   .enter-link {
     color: #004d9f;
-
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
-
     font-weight: 600;
     line-height: normal;
   }
@@ -147,8 +164,8 @@
 .modal-close-btn {
   cursor: pointer;
   position: absolute;
-  right: 17px;
-  top: 17px;
+  right: 0px;
+  top: 0px;
   z-index: 1000;
 }
 
@@ -162,4 +179,27 @@
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
+}
+
+.registration-btn {
+  width: 100%;
+  background-color: #064AB1;
+}
+
+.enter-link-container {
+  border-top: 1px solid #C3D5F5;
+  padding: 25px 22px 32px 32px;
+
+  button {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #064AB1;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
 }

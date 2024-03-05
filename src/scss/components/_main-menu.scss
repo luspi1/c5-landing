@@ -1,62 +1,105 @@
 .main-menu {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
-  padding: 16px 0;
-  gap: 20px;
+  gap: 48px;
+  height: 90px;
 
-  position: relative;
-  margin-bottom: 70px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #064AB1;
 
-  @media (max-width: 700px) {
-    margin-bottom: 0px;
+  &__logo {
+    margin: auto;
   }
 
   &__links {
     display: flex;
-    align-items: center;
+    align-items: stretch;
+    justify-content: space-between;
+    flex: 1;
   }
 
   &__nav {
-    margin-right: 230px;
+    display: flex;
+    align-items: stretch;
 
     ul {
       display: flex;
-      align-items: center;
-      gap: 50px;
+      align-items: stretch;
+      gap: 30px;
 
       li {
-        a {
-          display: inline-block;
-          padding: 16px 0;
-          color: #FFF;
-          @include montserrat-medium;
-          font-size: 16px;
-        }
 
-        &:hover {
-          a {
-            text-decoration: underline;
-          }
-        }
+        display: flex;
+        align-items: center;
       }
-    }
-
-    @media (max-width: 1200px) {
-      margin-right: 5vw;
     }
   }
 
   &__auth-btn {
-    color: #ffffff;
-    @include montserrat-semibold;
-    font-size: 16px;
+    padding: 10px 25px 10px 25px;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #064AB1;
+    border: 1px solid #064AB1;
+  }
+
+  .main-menu__personal {
     display: flex;
     align-items: center;
+    gap: 25px;
+    
+    .info-block-opener {
+      align-self: stretch;
+      
+      display: flex;
+      align-items: center;
+    }
+  }
 
-    svg {
-      margin-left: 10px;
+  .info-block-opener {
+    position: relative;
+    cursor: pointer;
+    padding-right: 25px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      width: 20px;
+      height: 100%;
+
+      background-repeat: no-repeat;
+      background-position: center;
+
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M5.70703 7L0.0778656 0.25L11.3362 0.25L5.70703 7Z' fill='%23064AB1' /%3E%3C/svg%3E");
+    }
+
+    &:hover {
+      color: #FF6716;
+    }
+
+    &_active {
+      color: #FF6716;
+
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.70703 0L11.3362 6.75H0.0778661L5.70703 0Z' fill='%23FF6716'/%3E%3C/svg%3E%0A");
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+
+        height: 3px;
+        width: 100%;
+        background-color: #FF6716;
+        bottom: 0;
+      }
     }
   }
 }
@@ -102,7 +145,7 @@
     content: '';
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: #000;
     transition-duration: 0.25s;
   }
 
@@ -133,7 +176,7 @@
     left: 0;
     right: 0;
     transition-duration: 0.25s;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: lightblue;
     position: fixed;
     z-index: 1000;
     padding: 30px 0;
@@ -153,5 +196,67 @@
     .main-menu__personal {
       margin-top: 10px;
     }
+  }
+}
+
+.main-menu__submenu {
+  display: none;
+  padding: 40px 0 65px;
+  border-top: 1px solid #C3D5F5;
+  position: absolute;
+  background-color: #fff;
+  width: 100vw;
+  top: 90px;
+  left: 0;
+  z-index: 1001;
+
+  @media screen and (max-width: 1024px) {
+    top: 180px;
+  }
+
+  ul {
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    display: flex;
+    gap: 50px;
+    border-bottom: 1px solid #C3D5F5;
+
+    @media screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+
+    li {
+      svg {
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      h6 {
+        margin-bottom: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 27px;
+        color: #1D1B1B;
+      }
+
+      p {
+        font-size: 15px;
+        max-width: 200px;
+      }
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #064AB1;
   }
 }

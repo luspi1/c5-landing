@@ -1,8 +1,8 @@
-<div class="modal" id="enter-modal">
+<div class="modal" id="question-modal">
   <div class="container">
     <button
       class="modal-close-btn"
-      data-close-modal="enter-modal"
+      data-close-modal="registration-modal"
       type="button"
     >
       <svg
@@ -24,77 +24,50 @@
         />
       </svg>
     </button>
-    <div class="form-wrapper">
-      <form class="enter-form styled-form" action="./data/test.txt">
-        <h4>Вход отельера</h4>
 
-        <div class="input-column-wrapper">
-          <label>Логин учетной записи<span>*</span></label>
-          <input
-            class="main-input phone-mask"
-            type="tel"
-            placeholder="+7 (999) 999-99-99"
-            name="hotelier_login"
-            required
-          />
-        </div>
-
-        <div class="input-column-wrapper">
-          <label>Пароль учетной записи<span>*</span></label>
-          <input
-            class="main-input"
-            type="password"
-            placeholder="*************"
-            name="hotelier_password"
-            required
-          />
-          @include('./eye-button.html')
-        </div>
-
-        <div class="modal-links">
-          <button
-            type="button"
-            data-open-modal="reset-password-modal"
-            data-close-modal="enter-modal"
-          >
-            Не помню пароль
-          </button>
-          <button
-            type="button"
-            data-open-modal="registration-modal"
-            data-close-modal="enter-modal"
-          >
-            Пройти регистрацию
-          </button>
-        </div>
-
-        <button class="main-btn submit-enter" type="submit">Войти</button>
-      </form>
+    <div class="modal-head">
+      <h5>Задайте вопрос</h5>
     </div>
 
     <div class="form-wrapper">
-      <form
-        class="reset-password-form styled-form hidden"
-        action="./data/test.txt"
-      >
-        <p>Код отправлен в виде SMS.</p>
-        <div class="input-column-wrapper">
-          <label>Проверочный код*</label>
+      <form action="#" class="main-form">
+        <div class="form-item">
           <input
-            class="main-input"
-            id="smsCode"
-            type="password"
-            placeholder="******"
-            name="enter_code"
+            class="form-item__input"
+            type="text"
+            name="user_name"
             required
+            autocomplete="off"
           />
+          <label class="form-item__label">Ваше имя<span>*</span></label>
         </div>
-        <div class="modal-links">
-          <a href="index.html">Не приходит код</a>
+
+        <div class="form-item">
+          <input
+            class="form-item__input phone-mask"
+            type="tel"
+            name="user_phone"
+            autocomplete="off"
+          />
+          <label class="form-item__label">Номер телефона<span>*</span></label>
         </div>
-        <button class="main-btn confirm-enter" type="submit">
-          Подтвердить вход
-        </button>
+
+        <div class="form-item">
+          <input
+            class="form-item__input"
+            type="email"
+            name="user_email"
+            required
+            autocomplete="off"
+          />
+          <label class="form-item__label">Адрес почты<span>*</span></label>
+        </div>
+
+        <div class="form-item">
+          <textarea placeholder="Что Вас интересует?"></textarea>
+        </div>
+
+        <button class="main-btn" type="submit">Отправить</button>
       </form>
     </div>
   </div>
