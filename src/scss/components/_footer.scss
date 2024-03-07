@@ -14,10 +14,13 @@
         font-weight: 400;
         font-size: 15px;
         color: #9BCCFF;
-
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        a:hover {
+            text-decoration: underline;
+        }
     }
 
     .container {
