@@ -20,6 +20,9 @@ body {
 
   color: $black;
   position: relative;
+  &._lock {
+    overflow: hidden;
+  }
 }
 
 main {
@@ -98,32 +101,12 @@ textarea {
   margin: 0 auto;
   max-width: 1250px;
   padding: 0 15px;
-
-  @media (max-width: 500px) {
-    padding: 0 5px;
-  }
 }
 
 .trim-string {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.modal-overlay {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  visibility: hidden;
-  z-index: -1;
-
-  &_active {
-    z-index: 998;
-    visibility: visible;
-  }
 }
 
 .main-title {
