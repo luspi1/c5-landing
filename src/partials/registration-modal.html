@@ -1,5 +1,5 @@
 <div class="modal" id="registration-modal">
-  <div class="container">
+  <div class="modal-container">
     <button
       class="modal-close-btn"
       data-close-modal="registration-modal"
@@ -25,77 +25,85 @@
       </svg>
     </button>
     <div class="form-wrapper">
-    <form class="reg-form" action="./data/test.txt">
-      <h4>Регистрация отельера</h4>
-      <p class="text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehen...
-      </p>
-      <div class="input-column-wrapper">
-        <label>Название отельера<span>*</span></label>
-        <input
-          class="main-input"
-          type="text"
-          placeholder="Бренд, название организации или ФИО сотрудника"
-          name="hotelier_name"
-          required
-        />
-      </div>
-      <div class="input-column-wrapper">
-        <label>Город или регион<span>*</span></label>
-        <input
-          class="main-input"
-          type="text"
-          placeholder="Россия, Тамбов"
-          name="hotelier_city"
-          required
-        />
-      </div>
-      <div class="input-column-wrapper">
-        <label>Логин отельера (e-mail)<span>*</span></label>
-        <input
-          class="main-input"
-          type="email"
-          placeholder="example@example.com"
-          name="hotelier_email"
-          required
-        />
-      </div>
-      <div class="input-column-wrapper">
-        <label>Телефон<span>*</span></label>
-        <input
-          class="main-input phone-mask"
-          type="tel"
-          placeholder="+7 (999) 999-99-99"
-          name="hotelier_phone"
-          required
-        />
-      </div>
+      <form class="reg-form" action="./data/test.txt">
+        <h4>Регистрация отельера</h4>
 
-      <p class="pass-text">
-        Пароль будет создан Системой автоматически и прислан Вам на электронную
-        почту, указанную Вами в качестве логина.
-      </p>
-      <div class="main-checkbox registration-agree">
-        <label class="checkbox-container">
-          <input type="checkbox" checked />
-          <span></span>
-        </label>
+        <div class="input-column-wrapper">
+          <label>Название отельера<span>*</span></label>
+          <input
+            class="main-input"
+            type="text"
+            placeholder="Бренд, название организации или ФИО сотрудника"
+            name="hotelier_name"
+            required
+          />
+        </div>
+        <div class="input-column-wrapper">
+          <label>Город или регион<span>*</span></label>
+          <input
+            class="main-input"
+            type="text"
+            placeholder="Россия, Тамбов"
+            name="hotelier_city"
+            required
+          />
+        </div>
 
-        <p>
-          Подверждаю ознакомление с <a href="#">Правилами Системы</a><br />
-          и <a href="#">Соглашением о Персональных Данных</a>
+        <div class="input-column-wrapper">
+          <label>Телефон<span>*</span></label>
+          <input
+            class="main-input phone-mask"
+            type="tel"
+            placeholder="+7 (999) 999-99-99"
+            name="hotelier_phone"
+            required
+          />
+        </div>
+
+        <div class="input-column-wrapper">
+          <label>Пароль учетной записи<span>*</span></label>
+          <input
+            class="main-input"
+            type="password"
+            placeholder="*************"
+            name="hotelier_password"
+            required
+          />
+          @include('./eye-button.html')
+        </div>
+
+        <div class="input-column-wrapper">
+          <label>Повторите пароль<span>*</span></label>
+          <input
+            class="main-input"
+            type="password"
+            placeholder="*************"
+            name="hotelier_repeat_password"
+            required
+          />
+          @include('./eye-button.html')
+        </div>
+
+        <p class="pass-text">
+          После нажатия кнопки «Зарегистрироваться» Система пришлет Вам СМС со
+          ссылкой. Перейдите по ссылке для завершения регистрации.
         </p>
-      </div>
-      <button class="main-btn _blue registration-btn" type="submit">
-        Зарегистрироваться
-      </button>
+        <div class="main-checkbox registration-agree">
+          <label class="checkbox-container">
+            <input type="checkbox" checked />
+            <span></span>
+          </label>
 
-      
-    </form>
-  </div>
+          <p>
+            Подверждаю ознакомление с <a href="#">Правилами Системы</a>
+            и <a href="#">Соглашением о Персональных Данных</a>
+          </p>
+        </div>
+        <button class="main-btn _blue registration-btn" type="submit" data-open-modal="registration-info-modal" data-close-modal="registration-modal">
+          Зарегистрироваться
+        </button>
+      </form>
+    </div>
 
     <div class="enter-link-container">
       <button
@@ -116,5 +124,5 @@
         </svg>
       </button>
     </div>
-  </div>  
+  </div>
 </div>

@@ -20,15 +20,29 @@
     width: 0;
   }
 
-  .container {
+  @media (max-width: 730px) {
+    width: 90vw;
+    padding: 30px 0px 20px 0px;
+  }
+
+  .modal-container {
     width: 550px;
     margin-left: 0;
     background: #fff;
     border-radius: 10px;
+
+    @media (max-width: 730px) {
+      position: relative;
+      width: 90vw;  
+    }
   }
 
   .form-wrapper {
     padding: 26px 26px 20px 28px;
+
+    @media (max-width: 730px) {
+      padding: 10px 10px 0px 15px;
+    }
   }
 
   &._active {
@@ -37,11 +51,16 @@
     visibility: visible;
   }
 
+
   h4 {
     margin-bottom: 12px;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 30px;
+
+    @media (max-width: 730px) {
+      font-size: 18px;
+    }
   }
 
   .input-column-wrapper {
@@ -59,6 +78,10 @@
       font-size: 15px;
       line-height: normal;
 
+      @media (max-width: 750px) {
+        font-size: 13px;
+      }
+
       span {
         margin-left: 0px;
         display: inline-block;
@@ -71,16 +94,23 @@
     padding: 11px 16px;
     font-size: 15px;
     @include opensans-semibold;
+
+    @media (max-width: 750px) {
+      font-size: 13px;
+    }
   }
 
   .pass-text {
     margin-bottom: 15px;
-    max-width: 425px;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
     color: #1d1b1b;
+
+    @media (max-width: 750px) {
+      font-size: 11px;
+    }
   }
 
   .main-checkbox {
@@ -122,11 +152,6 @@
     font-weight: 600;
     line-height: normal;
   }
-
-  @media (max-width: 730px) {
-    width: 90vw;
-    padding: 30px 20px 20px 20px;
-  }
 }
 
 .modal-overlay {
@@ -155,6 +180,10 @@
   font-weight: 400;
   line-height: normal;
 
+  @media (max-width: 750px) {
+    font-size: 13px;
+  }
+
   button {
     color: inherit;
   }
@@ -165,7 +194,19 @@
   position: absolute;
   right: 0px;
   top: 0px;
-  z-index: 1000;
+  z-index: 2000;
+
+
+  @media (max-width: 750px) {
+     right: 10px;
+     top: 40px;
+    position: fixed;
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
 }
 
 .submit-btn {
@@ -187,7 +228,8 @@
 
 .enter-link-container {
   border-top: 1px solid #c3d5f5;
-  padding: 25px 22px 32px 32px;
+  padding: 25px 22px 25px 29px;
+
 
   button {
     font-family: "Open Sans", sans-serif;
@@ -200,5 +242,13 @@
     display: flex;
     align-items: center;
     gap: 5px;
+  }
+
+  @media (max-width: 750px) {
+    padding: 15px 12px 15px 19px;
+
+    button span {
+      font-size: 12px;
+    }
   }
 }
