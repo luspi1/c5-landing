@@ -34,12 +34,12 @@ export const multipleSwiper = new Swiper('.multiple-swiper', {
 
     1024: {
       slidesPerView: 4,
-      spaceBetween: 12,
+      spaceBetween: 30,
     },
 
-    1280: {
+    1330: {
       slidesPerView: 5,
-      spaceBetween: 0,
+      spaceBetween: 27,
     },
   },
 })

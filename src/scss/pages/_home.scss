@@ -23,11 +23,12 @@
     }
 
     .main-btn {
+      font-family: 'Open Sans', sans-serif;
+
       @media (max-width: 850px) {
         font-size: 13px;
         padding: 10px 20px;
-        margin: auto;
-
+        margin: 5px auto 10px;
       }
     }
 
@@ -40,7 +41,6 @@
       margin-bottom: 32px;
       margin-top: -30px;
       max-width: 610px;
-
       font-family: "Open Sans", sans-serif;
       font-weight: 600;
       font-size: 45px;
@@ -54,12 +54,9 @@
 
       @media (max-width: 850px) {
         font-size: 24px;
-        max-width: 290px;
-        margin: 170px auto 0 auto;
+        margin: 150px auto 20px auto;
         text-align: center;
-
       }
-
     }
   }
 
@@ -158,21 +155,16 @@
 
   .system-functions {
     padding-top: 70px;
-    padding-bottom: 75px;
+    padding-bottom: 95px;
     background-color: #e8f4ff;
 
     @media (max-width: 900px) {
-      padding: 30px 10x;
-    }
-
-    @media (max-width: 750px) {
-      padding: 15px;
+      padding: 40px 10px 50px 10px;
     }
   }
 
   .system-functions-list {
     display: flex;
-
     flex-wrap: wrap;
     row-gap: 50px;
     column-gap: 55px;
@@ -207,7 +199,6 @@
       transition: all 0.3s;
 
       @media (max-width: 1300px) {
-        //width: 90vw;
         width: calc(100% - 5px);
         min-height: auto;
         margin: auto;
@@ -222,20 +213,16 @@
 
         h4 {
           font-size: 18px;
-          // border: 3px solid red;
 
           @media (max-width: 400px) {
             max-width: 478px;
             line-height: 1.3;
-
           }
         }
 
         svg {
           width: 42px;
           height: 50px;
-
-          // border: 3px solid yellow;
         }
       }
 
@@ -251,7 +238,6 @@
         color: #fff;
         background: url("../img/system-function-bg-blue.jpg") no-repeat center;
         cursor: pointer;
-
         display: block;
         padding-top: 180px;
 
@@ -307,44 +293,70 @@
   }
 
   .advantages {
-    width: 100vw;
-    padding-bottom: 40px;
+    padding-bottom: 85px;
     background-color: #e8f4ff;
 
+    &__container {
+      padding: 0 5px;
 
+      @media (max-width: 1280px) {
+        padding: 0 30px;
+      }
+    }
 
     .swiper-section {
       background-color: transparent;
       position: relative;
+    }
 
-      @media (max-width: 1300px) {
-        //max-width: 90vw;
-        // margin: 0 20px;
+    .multiple-swiper {
+      padding-right: 30px;
+
+      @media (max-width: 1330px) {
+        padding-right: 25px;
       }
 
-      @media (max-width: 400px) {
-        //max-width: 80vw;
-        //min-width: 100vw;
-        //width: calc(100% - 40px);
+      @media (max-width: 1024px) {
+        padding-right: 20px;
+      }
 
-        // border: 3px solid red;
+      @media (max-width: 768px) {
+        padding-right: 10px;
+      }
 
+      @media (max-width: 550px) {
+        padding-right: 5px;
+      }
 
-        // .container {
-        //  // border: 10px solid orangered;
-        //   padding: 0;
-        //   width: 100vw;
-        // }
+      .swiper-slide {
+        border: 1px dashed #6db4f5;
+        border-radius: 10px;
+
+        &:hover {
+          background-color: #fff;
+          border: 1px solid #fff;
+
+          .text-wrapper {
+            color: #064ab1;
+          }
+
+          svg path {
+            fill: #ff9142;
+          }
+
+          svg g,
+          svg path {
+            opacity: 1;
+          }
+        }
       }
     }
 
     .advantages-item {
       width: 100%;
-      margin: 0 10px;
+      padding: 30px 25px 0 15px;
       box-sizing: border-box;
-      padding: 30px 25px 0px 15px;
-      border: 1px dashed #6db4f5;
-      border-radius: 10px;
+
       font-family: "Open Sans", sans-serif;
       font-weight: 400;
       font-size: 15px;
@@ -353,19 +365,14 @@
       display: flex;
       flex-direction: column;
       justify-items: flex-start;
-      gap: 20px;
       min-height: 272px;
       cursor: pointer;
       transition: all 0.4s;
-
-      z-index: 100;
       position: relative;
 
       .text-wrapper {
         padding-left: 5px;
       }
-
-      //border: 10px solid red;
 
       @media (max-width: 500px) {
         width: 240px;
@@ -384,62 +391,29 @@
           margin: 0 auto 2px auto;
         }
       }
-
-
-
-      &:hover {
-        background-color: #fff;
-        border: 1px solid #fff;
-
-        .text-wrapper {
-          color: #064ab1;
-        }
-
-        svg path {
-          fill: #ff9142;
-        }
-
-        svg g,
-        svg path {
-          opacity: 1;
-        }
-      }
     }
 
-
     .slider-buttons-container {
-
-      // box-sizing: border-box;
       position: absolute;
       display: flex;
       justify-content: space-between;
-      width: calc(1220px + 100px);
+      width: 1320px;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
       margin: 0 auto;
 
-      // width: calc(100% - 50px);
-      //z-index: 999;
-      border: 3px solid greenyellow;
+      @media (max-width: 1330px) {
+        width: 100%;
+        padding: 0 10px;
+      }
 
-      @media (max-width: 1300px) {
-        // width: calc(100% + 70px);
-        // width: 100%;
-        // min-width: 100%;
-        //left: -30px;
-        // padding: 0 10px;
-        // left: -4vw;
-        // right: -4vw;
+      @media (max-width: 768px) {
+        padding: 0 5px;
       }
 
       @media (max-width: 400px) {
-        //padding-right: 20px;
-        // width: 100%;
-        // margin: 0 auto;
-
-
         svg {
           width: 20px;
           height: 30px;
@@ -448,15 +422,11 @@
     }
   }
 
-
-
-
-
   .connection {
     background-color: #fff;
 
     .container {
-      padding: 70px 0 130px 0;
+      padding: 80px 0 130px 10px;
 
       @media (max-width: 1300px) {
         padding: 40px 10px 70px 15px;
@@ -467,7 +437,7 @@
       }
 
       @media (max-width: 440px) {
-        padding: 10px 10px 0px 15px;
+        padding: 35px 10px 10зчpx 9px;
       }
     }
 
@@ -556,7 +526,6 @@
 
     @media (max-width: 950px) {
       padding: 40px 0;
-
     }
   }
 
