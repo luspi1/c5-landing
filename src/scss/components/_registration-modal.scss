@@ -17,6 +17,14 @@
   .registration-agree {
     display: flex;
     align-items: center;
+
+    @media (max-width: 750px) {
+      font-size: 11px;
+
+      a {
+        font-size: inherit;
+      }
+    }
   }
 
   .checkbox-container {

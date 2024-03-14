@@ -1,0 +1,44 @@
+#registration-info-modal {
+    background-color: #fff;
+    padding: 35px 20px;
+    max-width: 550px;
+
+    @media (max-width: 750px) {
+        padding: 45px 8px 20px;
+    }
+
+    .modal-close-btn {
+        top: 20px;
+        right: 20px;
+    }
+
+    h4 {
+        margin: 0 auto 20px auto;
+        max-width: 360px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 1.3;
+        text-align: center;
+        color: #FF6716;
+
+        @media (max-width: 750px) {
+            font-size: 24px;
+        }
+    }
+
+    p {
+        margin: 0 auto;
+        max-width: 370px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: center;
+
+        @media (max-width: 750px) {
+            font-size: 13px;
+            max-width: 300px;
+        }
+    }
+}

@@ -41,6 +41,10 @@
             .text-align-right {
                 text-align: left;
             }
+
+            @media (max-width: 750px) {
+                gap: 23px;
+              }
         }
     }
 

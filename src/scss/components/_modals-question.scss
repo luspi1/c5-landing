@@ -1,13 +1,29 @@
 #question-modal {
     width: 930px;
 
-    .container {
-        width: 870px;
+    @media (max-width: 970px) {
+        width: 90vw;
+
+        form {
+            padding-bottom: 20px;
+        }
+    }
+
+    .modal-container {
+        width: calc(100% - 60px);
+
+        @media (max-width: 970px) {
+            width: 100%;
+        }
     }
 
     .modal-head {
         border-bottom: 1px solid #C3D5F5;
         padding: 20px 0px;
+
+        @media (max-width: 970px) {
+            padding: 10px 0px;
+        }
 
         h5 {
             font-family: 'Open Sans', sans-serif;
@@ -15,6 +31,10 @@
             font-size: 25px;
             text-align: center;
             color: #1D1B1B;
+
+            @media (max-width: 970px) {
+                font-size: 18px;
+            }
         }
     }
 
@@ -35,7 +55,7 @@
 
             @media (max-width: 400px) {
                 font-size: 18px;
-                max-height: 45px;
+                min-height: 45px;
                 margin-bottom: 15px;
             }
 
@@ -46,16 +66,20 @@
                 top: 50%;
                 transform: translateY(-50%);
                 transition: 0.2s ease all;
-
                 font-family: 'Open Sans', sans-serif;
                 font-weight: 500;
                 font-size: 20px;
                 color: #A5AFBB;
-
                 padding-left: 5px;
 
-                @media (max-width: 400px) {
+                @media (max-width: 750px) {
                     font-size: 18px;
+                }
+
+                @media (max-width: 400px) {
+                    max-height: 45px;
+                    font-size: 13px;
+                    padding-left: 0;
                 }
 
                 span {
@@ -67,7 +91,6 @@
                 width: 100%;
                 min-height: 65px;
                 padding: 17px 17px;
-
                 border: none;
                 border-radius: 5px;
                 width: 100%;
@@ -78,6 +101,11 @@
                 line-height: 24px;
 
                 border: 1px solid #6DB4F5;
+
+                @media (max-width: 400px) {
+                    min-height: 45px;
+                    height: 45px;
+                }
 
                 &:focus {
                     outline: 1px solid #FF6716;
@@ -111,6 +139,16 @@
                 font-size: 20px;
                 color: #A5AFBB;
             }
+
+            @media (max-width: 400px) {
+                min-height: 140px;
+                padding-left: 10px;
+                padding-top: 15px;
+
+                &::placeholder {
+                    font-size: 13px;
+                }
+            }
         }
 
         button {
@@ -120,6 +158,12 @@
             font-size: 20px;
             text-transform: capitalize;
             min-height: 56px;
+
+            @media (max-width: 400px) {
+                font-size: 13px;
+                text-transform: uppercase;
+                min-height: 35px;
+            }
         }
     }
 }
