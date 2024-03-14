@@ -26,10 +26,12 @@ export const multipleSwiper = new Swiper('.multiple-swiper', {
   breakpoints: {
     550: {
       slidesPerView: 2,
+      spaceBetween: 30,
     },
 
     768: {
       slidesPerView: 3,
+      spaceBetween: 30,
     },
 
     1024: {
