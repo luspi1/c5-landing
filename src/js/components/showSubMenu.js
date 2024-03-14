@@ -13,6 +13,10 @@ if (infoBlockOpenerButtons) {
         e.currentTarget.classList.remove('info-block-opener_active')
         modalOverlay.style.top = '0'
         body.classList.remove('_lock')
+
+        if (window.screen.width > INITIAL_MOBILE_WIDTH) {
+          modalOverlay.classList.remove('_active')
+        }
       } else {
         infoBlockOpenerButtons.forEach((elem) => {
           elem.classList.remove('info-block-opener_active')
