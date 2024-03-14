@@ -8,11 +8,9 @@ if (infoBlockOpenerButtons) {
   infoBlockOpenerButtons.forEach((item) => {
     item.addEventListener('click', (e) => {
       if (e.target.tagName !== 'H5') return
-      console.log(e.currentTarget)
+
       if (e.currentTarget.classList.contains('info-block-opener_active')) {
-        console.log(e.currentTarget)
         e.currentTarget.classList.remove('info-block-opener_active')
-        modalOverlay.classList.remove('_active')
         modalOverlay.style.top = '0'
         body.classList.remove('_lock')
       } else {
@@ -24,6 +22,7 @@ if (infoBlockOpenerButtons) {
 
         if (window.screen.width > INITIAL_MOBILE_WIDTH) {
           body.classList.add('_lock')
+          modalOverlay.style.top = '90px'
         }
       }
     })

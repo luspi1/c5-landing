@@ -1,6 +1,10 @@
-.main-menu-wrapper .container {
-  @media (max-width: 1024px) {
-    padding: 0;
+.main-menu-wrapper {
+  background-color: #fff;
+
+  .container {
+    @media (max-width: 1024px) {
+      padding: 0;
+    }
   }
 }
 
@@ -15,19 +19,16 @@
   font-size: 18px;
   color: #064ab1;
 
-
-
   @media (max-width: 750px) {
     height: 81px;
     padding: 0 15px;
-    border-bottom: 1px solid #C3D5F5;
   }
-
 
   @media (max-width: 1024px) {
     position: relative;
     z-index: 9999;
     background-color: #fff;
+    border-bottom: 1px solid #C3D5F5;
   }
 
   &__logo {
