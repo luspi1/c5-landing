@@ -3,6 +3,10 @@ import { body, modalOverlay } from '../_vars'
 const INITIAL_MOBILE_WIDTH = 1024
 
 const infoBlockOpenerButtons = document.querySelectorAll('.info-block-opener')
+const menuCheckbox = document.querySelector('#menu-checkbox')
+const mainMenuButton = document.querySelector('.menu-button')
+const personalAccountButton = document.querySelector('.main-menu__auth-btn')
+const dropDownMenu = document.querySelector('.main-menu__links')
 
 if (infoBlockOpenerButtons) {
   infoBlockOpenerButtons.forEach((item) => {
@@ -32,8 +36,6 @@ if (infoBlockOpenerButtons) {
     })
   })
 
-  const menuCheckbox = document.querySelector('#menu-checkbox')
-
   modalOverlay.addEventListener('click', () => {
     body.classList.remove('_lock')
     infoBlockOpenerButtons.forEach((elem) => {
@@ -44,10 +46,16 @@ if (infoBlockOpenerButtons) {
   })
 }
 
-const mainMenuButton = document.querySelector('.menu-button')
-
 if (mainMenuButton) {
   mainMenuButton.addEventListener('click', () => {
     modalOverlay.classList.toggle('_active')
+  })
+}
+
+if (personalAccountButton) {
+  personalAccountButton.addEventListener('click', () => {
+    if (dropDownMenu && window.screen.width < INITIAL_MOBILE_WIDTH) {
+      menuCheckbox.checked = false
+    }
   })
 }
