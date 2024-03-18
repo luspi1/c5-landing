@@ -13,11 +13,15 @@
   max-height: 90vh;
   -ms-overflow-style: none;
   scrollbar-width: none;
-
   border-radius: 10px;
 
   &::-webkit-scrollbar {
     width: 0;
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 30px;
+    overflow-y: scroll;
   }
 
   @media (max-width: 730px) {

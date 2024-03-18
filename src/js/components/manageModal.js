@@ -1,4 +1,6 @@
-import { modalOverlay } from '../_vars'
+import { modalOverlay, INITIAL_MOBILE_WIDTH } from '../_vars'
+
+const mainMenu = document.querySelector('.main-menu')
 
 export const manageModal = () => {
   const openModalBtns = document.querySelectorAll('button[data-open-modal]')
@@ -25,6 +27,8 @@ export const manageModal = () => {
         if (targetModal) {
           targetModal.classList.remove('_active')
           modalOverlay.classList.remove('_active')
+
+          document.body.classList.remove('_lock')
         }
       })
     })
@@ -40,6 +44,11 @@ export const manageModal = () => {
 
         targetModal.classList.add('_active')
         modalOverlay.classList.add('_active')
+
+        if (window.screen.width < INITIAL_MOBILE_WIDTH) {
+          document.body.classList.add('_lock')
+          mainMenu.style.zIndex = 0
+        }
       })
     })
   }
