@@ -9,3 +9,4 @@ export const accessResetModal = document.querySelector('#reset-access-modal')
 
 export const SMS_SECONDS_START_VALUE = 30
 export const TIME_INTERVAL_MILLISECONDS = 1000
+export const INITIAL_MOBILE_WIDTH = 1024

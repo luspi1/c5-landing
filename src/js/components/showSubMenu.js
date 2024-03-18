@@ -1,9 +1,8 @@
-import { body, modalOverlay } from '../_vars'
-
-const INITIAL_MOBILE_WIDTH = 1024
+import { body, modalOverlay, INITIAL_MOBILE_WIDTH } from '../_vars'
 
 const infoBlockOpenerButtons = document.querySelectorAll('.info-block-opener')
 const menuCheckbox = document.querySelector('#menu-checkbox')
+const mainMenu = document.querySelector('.main-menu')
 const mainMenuButton = document.querySelector('.menu-button')
 const personalAccountButton = document.querySelector('.main-menu__auth-btn')
 const dropDownMenu = document.querySelector('.main-menu__links')
@@ -49,6 +48,7 @@ if (infoBlockOpenerButtons) {
 if (mainMenuButton) {
   mainMenuButton.addEventListener('click', () => {
     modalOverlay.classList.toggle('_active')
+    mainMenu.style.zIndex = 1000
   })
 }
 
